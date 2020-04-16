@@ -1,5 +1,6 @@
 ---
 toc: true- branch: master
+layout: post
 badges: true
 comments: true
 categories: [OpenML, data]
