@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Exploring new dataset format options for OpenML.org
-categories: [markdown]
+categories: [OpenML, Data]
 comments: true
 title: Finding a standard dataset format for machine learning
 ---
