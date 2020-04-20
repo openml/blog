@@ -132,13 +132,13 @@ Drawbacks:
 | --- | --- | --- | --- | --- |
 | Consistency across different platforms | Check or clarify | ✅ | ✅ | ✅(dialect) |
 | Support and documentation | ✅ | ✅ | ✅ | ✅ |
-| Supports very large and high-dimensional datasets | ✅ | ✅ | ❌(limited nr. columns per table) | ✅ Storing tensors requires flattening. |
-| Simplicity | ✅ | ❌(basically full file system) | ✅(database) | ✅ |
-| Metadata support | Only minimal | ✅ | ✅ | ❌(requires separate metadata file) |
-| Maintenance | Apache project, open and quite [active](https://www.slideshare.net/Hadoop_Summit/the-columnar-roadmap-apache-parquet-and-apache-arrow-102997214) | Closed group, but [active](https://www.slideshare.net/HDFEOS/hdf5-roadmap-20192020) community on Jira and conferences | Run by a [company](https://www.sqlite.org/prosupport.html). Community interaction via email list. | ✅ |
-| Available examples of usage in ML | ✅ | ✅ | ❌ | ✅ |
-| Allows incremental reads/writes | Yes, but not supported by current Python libs | ✅ | ✅ | Yes (but not random access) |
-| Flexibility | Only tabular data supported | Very flexible, maybe too flexible | Relational multi-table | Only tabular |
+| Supports very large and high-dimensional datasets | ✅ | ✅ | ❌(limited nr. columns<br> per table) | ✅ Storing tensors<br> requires flattening. |
+| Simplicity | ✅ | ❌(basically full <br>file system) | ✅(database) | ✅ |
+| Metadata support | Only minimal | ✅ | ✅ | ❌(requires separate <br> metadata file) |
+| Maintenance | Apache project, open<br> and quite [active](https://www.slideshare.net/Hadoop_Summit/the-columnar-roadmap-apache-parquet-and-apache-arrow-102997214) | Closed group,<br> but [active](https://www.slideshare.net/HDFEOS/hdf5-roadmap-20192020) community on <br>Jira and conferences | Run by a [company](https://www.sqlite.org/prosupport.html). Community interaction <br>via email list. | ✅ |
+| Available examples of<br> usage in ML | ✅ | ✅ | ❌ | ✅ |
+| Allows incremental <br>reads/writes | Yes, but not <br>supported by current<br> Python libs | ✅ | ✅ | Yes (but not <br>random access) |
+| Flexibility | Only tabular<br> data supported | Very flexible, <br>maybe too flexible | Relational multi-table | Only tabular |
 
 **Performance benchmarks**
 
