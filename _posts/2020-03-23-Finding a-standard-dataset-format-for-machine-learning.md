@@ -155,9 +155,6 @@ If we have missed any format we should investigate, or misunderstood those we ha
 
 Email: openmlhq@googlegroups.com
 
-React via github: https://github.com/openml/openml-data/issues/29
-
-
 
 **Contributors to this blog post:**
 
