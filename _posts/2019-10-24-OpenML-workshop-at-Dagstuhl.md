@@ -4,7 +4,7 @@ layout: post
 description: OpenML workshop at Dagstuhl
 categories: [OpenML]
 comments: true
-title: OpenML
+title: OpenML workshop at Dagstuhl
 image: images/fastpages_posts/dagstuhl.jpeg
 author: Heidi Seibold
 ---
