@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://openml.github.io/blog/openml/2016/05/02/OpeML.html</loc>
+<lastmod>2016-05-02T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html</loc>
+<lastmod>2016-09-18T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html</loc>
+<lastmod>2017-03-03T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>https://openml.github.io/blog/2019/10/24/openml-workshop-at-dagstuhl.html</loc>
+<lastmod>2019-10-24T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html</loc>
 <lastmod>2020-03-23T00:00:00-05:00</lastmod>
 </url>

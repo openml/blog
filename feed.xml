@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://openml.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://openml.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-20T16:36:19-05:00</updated><id>https://openml.github.io/blog/feed.xml</id><title type="html">OpenML Blog</title><subtitle>A blog about OpenML and open machine learning in general.</subtitle><entry><title type="html">Finding a standard dataset format for machine learning</title><link href="https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html" rel="alternate" type="text/html" title="Finding a standard dataset format for machine learning" /><published>2020-03-23T00:00:00-05:00</published><updated>2020-03-23T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/data/2020/03/23/Finding%20a-standard-dataset-format-for-machine-learning</id><content type="html" xml:base="https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html">&lt;p&gt;With OpenML, we aim to take a worry-free, 'zen'-like approach to working with machine learning datasets, making them easy and reliable to use. We want to offer training data that can be easily (or automatically) used. As such, you can now load any dataset and start building models without any manual intervention. For historical reasons, we have done this by internally storing all data in the &lt;a href=&quot;https://www.cs.waikato.ac.nz/ml/weka/arff.html&quot;&gt;ARFF&lt;/a&gt; data format, which is a simple single-table format, including meta-data such as the correct feature data types.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://openml.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://openml.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-20T16:54:18-05:00</updated><id>https://openml.github.io/blog/feed.xml</id><title type="html">OpenML Blog</title><subtitle>A blog about OpenML and open machine learning in general.</subtitle><entry><title type="html">Finding a standard dataset format for machine learning</title><link href="https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html" rel="alternate" type="text/html" title="Finding a standard dataset format for machine learning" /><published>2020-03-23T00:00:00-05:00</published><updated>2020-03-23T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/data/2020/03/23/Finding%20a-standard-dataset-format-for-machine-learning</id><content type="html" xml:base="https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html">&lt;p&gt;With OpenML, we aim to take a worry-free, 'zen'-like approach to working with machine learning datasets, making them easy and reliable to use. We want to offer training data that can be easily (or automatically) used. As such, you can now load any dataset and start building models without any manual intervention. For historical reasons, we have done this by internally storing all data in the &lt;a href=&quot;https://www.cs.waikato.ac.nz/ml/weka/arff.html&quot;&gt;ARFF&lt;/a&gt; data format, which is a simple single-table format, including meta-data such as the correct feature data types.&lt;/p&gt;
 
 &lt;p&gt;However, this format is currently holding us back: it is not ideal for storing large datasets, the format is only loosely defined causing different parsers to behave differentlyeDd, and many new machine learning tasks require multi-table data. For instance, image segmentation or object detection tasks have both images and varying amounts of annotations per image.&lt;/p&gt;
 
@@ -235,4 +235,370 @@ If we have missed any format we should investigate, or misunderstood those we ha
 
 &lt;p&gt;&lt;strong&gt;Contributors to this blog post:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter Gijsbers&lt;/p&gt;</content><author><name>Pieter Gijsbers, Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren</name></author><summary type="html">With OpenML, we aim to take a worry-free, 'zen'-like approach to working with machine learning datasets, making them easy and reliable to use. We want to offer training data that can be easily (or automatically) used. As such, you can now load any dataset and start building models without any manual intervention. For historical reasons, we have done this by internally storing all data in the ARFF data format, which is a simple single-table format, including meta-data such as the correct feature data types.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://openml.github.io/blog/images/fastpages_posts/format.jpg" /><media:content medium="image" url="https://openml.github.io/blog/images/fastpages_posts/format.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter Gijsbers&lt;/p&gt;</content><author><name>Pieter Gijsbers, Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren</name></author><summary type="html">With OpenML, we aim to take a worry-free, 'zen'-like approach to working with machine learning datasets, making them easy and reliable to use. We want to offer training data that can be easily (or automatically) used. As such, you can now load any dataset and start building models without any manual intervention. For historical reasons, we have done this by internally storing all data in the ARFF data format, which is a simple single-table format, including meta-data such as the correct feature data types.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://openml.github.io/blog/images/fastpages_posts/format.jpg" /><media:content medium="image" url="https://openml.github.io/blog/images/fastpages_posts/format.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenML workshop at Dagstuhl</title><link href="https://openml.github.io/blog/2019/10/24/openml-workshop-at-dagstuhl.html" rel="alternate" type="text/html" title="OpenML workshop at Dagstuhl" /><published>2019-10-24T00:00:00-05:00</published><updated>2019-10-24T00:00:00-05:00</updated><id>https://openml.github.io/blog/2019/10/24/openml-workshop-at-dagstuhl</id><content type="html" xml:base="https://openml.github.io/blog/2019/10/24/openml-workshop-at-dagstuhl.html">&lt;p&gt;&lt;strong&gt;October 2019&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Twice a year the &lt;a href=&quot;https://www.openml.org/&quot;&gt;OpenML&lt;/a&gt; community meets for a &lt;a href=&quot;http://meet.openml.org/&quot;&gt;workshop/hackathon/unconference&lt;/a&gt;. We improve the platform, discuss and learn for 5 days. If that sounds interesting to you, &lt;a href=&quot;https://www.openml.org/contact&quot;&gt;get in touch&lt;/a&gt; or follow updates on &lt;a href=&quot;http://meet.openml.org/&quot;&gt;meet.openml.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This time the workshop took place at &lt;a href=&quot;https://www.dagstuhl.de/19423&quot;&gt;Dagstuhl&lt;/a&gt;, a great place for Seminars.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/10944/1*eKnX3C1VLe5xx7qj0IyBtg.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/10944/1*7ePW9vZ5IU1r40kR9aWHsA.jpeg&quot; alt=&quot;Group pictures&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We had several breakouts where workshop attendees can join to learn, discuss and progress OpenML. In the following we discuss some of the topics we touched.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Science projects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Brainstorm on scientific projects to do with OpenML. Prioritize impactful, well-defined research ideas.
+We came up with quite a long list of very promising research questions that should actually be quite easy to answer based on OpenML. Many of these are along the lines of empirically providing evidence to verify or bust commonly-held beliefs in the community. Frank would gladly hire a strong postdoc (or quite independent PhD student) and maybe a research engineer, to work on these scientific questions under the umbrella of “evidence-based machine learning with OpenML”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Benchmarking using OpenML&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Define guidelines on how to define world-class benchmarks and how to run them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diverse datasets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;New and more diverse datasets.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dataset quality&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;How to measure data quality and how to improve the quality of datasets on OpenML.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OpenML use cases for novices&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Shortlist common use cases and start writing accessible blog posts for novice users. If you are a OpenML newbie we need your help with this topic.&lt;/p&gt;
+
+&lt;p&gt;The output of this breakout will be at least one blog post. Keep an eye out for them here :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Running a competition using OpenML&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We assessed the current issues with running in-class competitions for teaching purposes using OpenML (biggest one: easy use for non-developers) and brainstormed on a new competition format with related competitions, one for each component of a solution, such as HPO, creating good meta-features, creating a good search space, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Planning future workshops&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Decide on location and timing for the next couple of workshops. The next OpenML workshop will be in Spring (week of March 30th or week of April 14th) close to Munich. For updates check &lt;a href=&quot;http://meet.openml.org/&quot;&gt;http://meet.openml.org&lt;/a&gt;. The workshop will be cohosted with some other Open Source Machine Learning projects.&lt;/p&gt;
+
+&lt;p&gt;Furthermore a workshop in Austin is being planned for next summer and a datathon is in planning. We are planning to organize dev sprints at various PyCons next year.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;New frontend&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Feedback session on new frontend, Additional visualization for datasets&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future of client APIs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Currently, a lot of resources are bound developing different client APIs, such as the &lt;a href=&quot;https://openml.github.io/openml-python/master/&quot;&gt;Python API&lt;/a&gt;, &lt;a href=&quot;https://github.com/openml/openml-r&quot;&gt;R API&lt;/a&gt; and &lt;a href=&quot;https://github.com/openml/openml-java&quot;&gt;Java API&lt;/a&gt;. We discussed how we can better share work and code between the different APIs and the server. For now we are working on automatically generating the &lt;a href=&quot;https://www.openml.org/api_docs#!/data/get_data_id&quot;&gt;Swagger API&lt;/a&gt; documentation from the PHP function documentation, which in turn will allow us to generate (documented) parts of the APIs, reduce the need for maintenance and will help to spread updates on the API faster.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Flow 2.0 design&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Current flow design used in OpenML was inspired by Weka, but through time many limitations have been identified, primarily that existing flow does not allow duplicate use of same component and that it cannot express DAG-based ML programs. We started working on a new &lt;a href=&quot;https://github.com/openml/flow2&quot;&gt;specification&lt;/a&gt; building on insights from mlr3 and d3m projects, centered around DAG representation. Current plan is to prepare a draft specification and implement prototype converters between other systems and this new specification. Once we do that we will re-evaluate the amount of work it took to build those prototypes and how well the specification satisfied those other systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Bot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The LRZ in Munich provided us with CPU time during the SuperMUC-NG supercomputer test phase, which we used to perform experiments of popular machine learning algorithms with random hyperparameter configurations. This resulted in millions of data points on more than a hundred datasets that we will analyse and publish. The data can be used to learn about typical behaviour of different learners across different datasets, and to construct surrogate models for tuning algorithm benchmarks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;AutoML Benchmark (Janek)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A study was created containing 76 binary and multiclass tasks of reasonable difficulty.&lt;/p&gt;
+
+&lt;p&gt;These can be used as a more difficult version of OpenML-100 or in &lt;a href=&quot;https://github.com/openml/automlbenchmark&quot;&gt;amlb&lt;/a&gt; a platform for reproducible benchmarking of AutoML systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;R API&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Short session on how the R api will (need to) change. The main issue discussed was that the OpenML R package runs with mlr and breaks when the new package (mlr3) is loaded. We will update the current OpenML R package to work with mlr3. At the same time we are thinking about a vision for a rewrite of the OpenML R package.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Python API&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We made a lot of improvements to the Python API over the week, with over 20 PRs merged! We’ve added more examples on how to use the package, fixed bugs, improved documentation and refactored code. In the coming days we’re going to make all these improvements available in a new PyPI release. For those looking for a higher level overview of the package, we will publish a paper next week which highlights use-cases, its software design, and project structure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Benchmarking paper&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We are working on a comprehensive paper using sklearn, mlr and WEKA, which should demonstrate how OpenML can be used for proper benchmarking and analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Guidelines / Overfitting / Comparable Metalearning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are plans for writing a guidelines and pitfalls paper on benchmarking, meta-overfitting and statistical analysis of results on OpenML.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data Formats&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Currently OpenML supports only tabular data in ARFF data format. This is very limiting for many ML tasks. We discussed and explored other data formats we could use as the future next data format. We will post a separate blog post about our process and insights.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Funding&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OpenML is looking for funding (developers). New ideas on obtaining funding are very welcome. We discussed some ideas: American funding (we need a collaboration partner); ALICE / CLAIRE; Companies. We are a foundation now, which might make it easier.&lt;/p&gt;
+
+&lt;p&gt;Some of the PIs (in particular Bernd Bischl, Frank Hutter and Dawn Song) in the project offer positions with a mix of ML research and development. Contact them if you are interested!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1786/1*xoWqGuds3vKIbfDIVlURbA.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/8536/1*zhu6XhdnubALaaCsVYA_Kg.jpeg&quot; alt=&quot;Sketch of the OpenML infrastructure (left), Breakout overview of Tuesday (right)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We had some talks at the workshop as well:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mitar Milutinovic&lt;/strong&gt;: &lt;a href=&quot;https://mitar.gitlab.io/d3m-short-introduction-slides/#/&quot;&gt;A short introduction to Data Driven Discovery (D3M)&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Yiwen Zhu and Markus Weimer&lt;/strong&gt;: Large-scale analysis of Jupyter notebooks&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Martin Binder, Michel Lang, Florian Pfisterer, Bernd Bischl&lt;/strong&gt;: &lt;a href=&quot;https://github.com/mlr-org/mlr-outreach/blob/master/2019_dagstuhl/mlr3pipelines.pdf&quot;&gt;Pipelining with mlr3&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;… and lots of fun…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/6048/1*50jB3NV1dg00lZXtU4wZVg.jpeg&quot; alt=&quot;On the hike&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Wanna join the OpenML community? &lt;a href=&quot;https://www.openml.org/contact&quot;&gt;Get in touch&lt;/a&gt;!&lt;/p&gt;</content><author><name></name></author><summary type="html">October 2019</summary></entry><entry><title type="html">Basic components of OpenML</title><link href="https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html" rel="alternate" type="text/html" title="Basic components of OpenML" /><published>2017-03-03T00:00:00-06:00</published><updated>2017-03-03T00:00:00-06:00</updated><id>https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML</id><content type="html" xml:base="https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html">&lt;p&gt;During my PhD, we developed OpenML, an online experiment database for Machine Learning. Researchers are encouraged to upload their experimental results on it, so that these can be reused by anyone. Various high level papers have been published that overview the design goals, benefits and opportunities (for example, at &lt;a href=&quot;http://link.springer.com/chapter/10.1007%2F978-3-642-40994-3_46&quot;&gt;ECML/PKDD 2013&lt;/a&gt;, &lt;a href=&quot;http://dl.acm.org/citation.cfm?id=2641198&quot;&gt;SIGKDD Explorations&lt;/a&gt; and &lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v41/vanschoren15.html&quot;&gt;JLMR&lt;/a&gt;). However, there is no clear overview of the basic components upon which the platform is build. In this blog post I will review these, and discuss some best practises.&lt;/p&gt;
+
+&lt;h1 id=&quot;data&quot;&gt;Data&lt;/h1&gt;
+
+&lt;p&gt;One of the core components of OpenML are datasets. People can upload their datasets, and the system automatically organises these on line. An example of a dataset is the well-known &lt;a href=&quot;http://www.openml.org/d/61&quot;&gt;Iris dataset&lt;/a&gt;. It shows all features, once of these is identified as the ‘default target attribute’, although this concept is flexible. It also shows some automatically computed data qualities (or, meta-features). Each dataset has it’s own unique ID. Information about the dataset, the data features and the data qualities can be obtained automatically by means of the following API functions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/data/get_data_list&quot;&gt;Get all available datasets&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/data/get_data_id&quot;&gt;Get dataset&lt;/a&gt; (required the data id)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/data/get_data_features_id&quot;&gt;Get data features&lt;/a&gt; (requires the data id)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/data/get_data_qualities_id&quot;&gt;Get data qualities&lt;/a&gt; (requires the data id)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;task-types-and-tasks&quot;&gt;Task types and tasks&lt;/h1&gt;
+
+&lt;p&gt;A dataset alone does not constitute a scientific task. We must first agree on what types of results are expected to be shared. This is expressed in task types: they define what types of inputs are given, which types of output are expected to be returned, and what protocols should be used. For instance, classification tasks should include well-defined cross-validation procedures, labelled input data, and require predictions as outputs. The collection of all this information together is called a task. The Iris dataset has various tasks defined on it, &lt;a href=&quot;http://www.openml.org/t/59&quot;&gt;for example this one&lt;/a&gt;. Although the web-interface does not show it, this task formally describes the target attribute that should be modelled (in this case the same as the default target attribute of the dataset, but this is flexible), the quality estimation procedure (10-fold cross-validation), the evaluation measure (predictive accuracy) and the cross-validation folds. Useful API operations include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/task/get_task_list&quot;&gt;Get all available tasks&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/task/get_task_list_type_id&quot;&gt;Get all available tasks of a given type&lt;/a&gt; (e.g. get all Classification tasks, requires the id of the task type)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/task/get_task_id&quot;&gt;Get the details of a task&lt;/a&gt; (requires task id)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently, there are a wide range of task types defined on OpenML, including classification, regression, on line learning, clustering and subgroup discovery. Although this set can be extended, this is currently not a supported API operation (meaning that we will add them by hand). If you interested in task types that are currently not supported, please contact us.&lt;/p&gt;
+
+&lt;h1 id=&quot;flows&quot;&gt;Flows&lt;/h1&gt;
+
+&lt;p&gt;Tasks can be ‘solved’ by classifiers (or algorithms, workflows, flows). OpenML stores references to these flows. It is important to stress that flows are actually ran on the computer of the user, only meta-information about the flow is stored on OpenML. This information includes basic trivialities such as the creator, toolbox and compilation instructions, but also more formal description about hyper parameter. A flow can also contain subflows, for example, the flow Bagging can have a subflow ‘Decision Tree’ which would make the flow ‘Bagging of Decision Trees’. A flow is distinguished by it’s name and ‘external version’, which are both provided by the uploader. When uploading a flow, it is important to think about a good naming convention for the both, for example, the git commit number could be used as external version, as this uniquely identifies a state of the code. Ideally, when two persons are using the same flow, they will use the same name and external version, so that results of the flows can be compared across tasks. (This is ensured when using the toolboxed in which OpenML is integrated, such as Weka, Scikit Learn and MLR). Useful API functions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/flow/get_flow_list&quot;&gt;List all flows&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/flow/get_flow_owned&quot;&gt;List all my flows&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/flow/get_flow_id&quot;&gt;Give details about a given flow &lt;/a&gt;(requires flow id)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;runs&quot;&gt;Runs&lt;/h1&gt;
+
+&lt;p&gt;Whenever a flow executes a task, this is called a run. The existence of runs is actually the main contribution of OpenML. Some experiments take weeks to complete, and having the results stored on OpenML helps other researchers resuse the experiments. The task description specifies which information should be uploaded in order to have a valid run, in most cases, for each cross-validation fold the predictions on the test set. This allows OpenML to calculate basic evaluation measures, such as predictive accuracy, ROC curves and many more. Also information about the flow and hyper parameter settings should be provided. Some useful API functions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/run/get_run_list_task_ids&quot;&gt;List all runs performed on a given task&lt;/a&gt; (requires task id, e.g., the iris task is 59)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/run/get_run_list_filters&quot;&gt;Compare two flows on all tasks&lt;/a&gt; (requires a comma separated list of flow ids, e.g., 1720, 1721 for comparing k-nn with a decision tree)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And many more …&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usually, the result is in some XML or JSON format (depending on the preference of the user), linking together various task ids, flow ids, etc. In order for this to become meaningful, the user needs to perform other API tasks to get information about what flows were executed, what tasks and datasets were used, etc. Details about this will be provided in another post.&lt;/p&gt;
+
+&lt;h1 id=&quot;setups&quot;&gt;Setups&lt;/h1&gt;
+
+&lt;p&gt;Every run that is executed by a flow, contains information about the hyper parameter settings of the flow. A setup is the combination of all parameter settings of a given flow. OpenML internally links the result of a given run to a setup id. This way, experiments can be done across hyper parameter settings. For example,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.openml.org/api_docs/#!/run/get_run_list_filters&quot;&gt;Compare two setups on all tasks&lt;/a&gt; (requires a comma separated list of setup ids, e.g., 8994, 8995, 8996 for comparing multiple MLP configurations)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As setups constitute a complex concept, most of the operations concerning setups are hidden from the user. Hence, not all setup functions are properly documented yet. A later blogpost will detail on these.&lt;/p&gt;</content><author><name>Jan van Rijn</name></author><summary type="html">During my PhD, we developed OpenML, an online experiment database for Machine Learning. Researchers are encouraged to upload their experimental results on it, so that these can be reused by anyone. Various high level papers have been published that overview the design goals, benefits and opportunities (for example, at ECML/PKDD 2013, SIGKDD Explorations and JLMR). However, there is no clear overview of the basic components upon which the platform is build. In this blog post I will review these, and discuss some best practises.</summary></entry><entry><title type="html">mlr loves OpenML</title><link href="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" rel="alternate" type="text/html" title="mlr loves OpenML" /><published>2016-09-18T00:00:00-05:00</published><updated>2016-09-18T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML</id><content type="html" xml:base="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html">&lt;p&gt;&lt;a href=&quot;http://www.openml.org/&quot;&gt;OpenML&lt;/a&gt; stands for Open Machine Learning and is an online platform, which aims at supporting collaborative machine learning online. It is an Open Science project that allows its users to share data, code and machine learning experiments.&lt;/p&gt;
+
+&lt;p&gt;At the time of writing this blog post I am in Eindhoven at an &lt;a href=&quot;http://openml2016dev.openml.org/&quot;&gt;OpenML workshop&lt;/a&gt;, where developers and scientists meet to work on improving the project. Some of these people are R users and they (we) are developing an &lt;a href=&quot;https://github.com/openml/openml-r&quot;&gt;R package&lt;/a&gt; that communicates with the OpenML platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2322/0*zOdJK4jpz2f6u0rW.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;openml-in-r&quot;&gt;OpenML in R&lt;/h1&gt;
+
+&lt;p&gt;The OpenML R package can list and download data sets and machine learning tasks (prediction challenges). In R one can run algorithms on the these data sets/tasks and then upload the results to OpenML. After successful uploading, the website shows how well the algorithm performs. To run the algorithm on a given task the OpenML R package builds on the &lt;a href=&quot;https://github.com/mlr-org/mlr&quot;&gt;mlr&lt;/a&gt; package. mlr understands what a task is and can run learners on that task. So all the OpenML package needs to do is convert the OpenML objects to objects mlr understands and then mlr deals with the learning.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-small-case-study&quot;&gt;A small case study&lt;/h1&gt;
+
+&lt;p&gt;We want to create a little study on the &lt;a href=&quot;http://www.openml.org/&quot;&gt;OpenML website&lt;/a&gt;, in which we compare different types of Support Vector Machines. The study gets an ID assigned to it, which in our case is 27. We use the function ksvm (with different settings of the function argument type) from package kernlab, which is integrated in mlr (“classif.ksvm”).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1836/0*Z-s6eXOPyynmd_dW.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For details on installing and setting up the OpenML R package please see the &lt;a href=&quot;https://github.com/openml/openml-r&quot;&gt;guide&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;p&gt;Let’s start conducting the study:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Load the packages and list all tasks which have between 100 and 500 observations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;library(&quot;OpenML&quot;) library(&quot;mlr&quot;) library(&quot;farff&quot;) library(&quot;BBmisc&quot;)
+
+dsize = c(100, 500) taskinfo_all = listOMLTasks(number.of.instances = dsize)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select all supervised classification tasks that do 10-fold cross-validation and choose only one task per data set. To keep the study simple and fast to compute, select only the first three tasks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;taskinfo_10cv = subset(taskinfo_all,
+     task.type == &quot;Supervised Classification&quot; &amp;amp;
+     estimation.procedure == &quot;10-fold Crossvalidation&quot; &amp;amp;
+     evaluation.measures == &quot;predictive_accuracy&quot; &amp;amp;
+     number.of.missing.values == 0 &amp;amp;
+     number.of.classes %in% c(2, 4))
+
+taskinfo = taskinfo_10cv[1:3, ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create the learners we want to compare.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lrn.list = list(
+   makeLearner(&quot;classif.ksvm&quot;, type = &quot;C-svc&quot;),
+   makeLearner(&quot;classif.ksvm&quot;, type = &quot;kbb-svc&quot;),
+   makeLearner(&quot;classif.ksvm&quot;, type = &quot;spoc-svc&quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the learners on the three tasks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grid = expand.grid(task.id = taskinfo$task.id,
+                   lrn.ind = seq_along(lrn.list))
+
+runs = lapply(seq_row(grid), function(i) {
+  message(i)
+  task = getOMLTask(grid$task.id[i])
+  ind = grid$lrn.ind[i]
+  runTaskMlr(task, lrn.list[[ind]])
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;And finally upload the runs to OpenML. The upload function (uploadOMLRun) returns the ID of the uploaded run object. When uploading runs that are part of a certain study, tag it with study_ and the study ID. After uploading the runs appear on the website and can be found using the tag or via the &lt;a href=&quot;http://www.openml.org/index.php/s/27&quot;&gt;study homepage&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## please do not spam the OpenML server by uploading these
+## tasks. I already did that.
+run.id = lapply(runs, uploadOMLRun, tags = &quot;study_27&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To show the results of our study, list the run evaluations and make a nice plot.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;evals = listOMLRunEvaluations(tag = &quot;study_27&quot;)
+
+evals$task.id = as.factor(evals$task.id)
+evals$setup.id = as.factor(evals$setup.id)
+
+library(&quot;ggplot2&quot;)
+ggplot(evals, aes(x = setup.id, y = predictive.accuracy,
+                  color = data.name, group = task.id)) +
+  geom_point() + geom_line()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1008/1*Xdv2inbezSO9MVu9FJ2-qw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can go ahead and create a bigger study using the techniques you have learned.&lt;/p&gt;
+
+&lt;h1 id=&quot;further-infos&quot;&gt;Further infos&lt;/h1&gt;
+
+&lt;p&gt;If you are interested in more, check out the OpenML &lt;a href=&quot;https://medium.com/open-machine-learning&quot;&gt;blog&lt;/a&gt;, the &lt;a href=&quot;https://www.researchgate.net/publication/263890323_OpenML_Networked_science_in_machine_learning&quot;&gt;paper&lt;/a&gt; and the &lt;a href=&quot;https://github.com/openml&quot;&gt;GitHub repos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Originally published at &lt;a href=&quot;http://mlr-org.github.io/mlr-loves-OpenML/&quot;&gt;mlr-org.github.io&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content><author><name>Heidi Seibold</name></author><summary type="html">OpenML stands for Open Machine Learning and is an online platform, which aims at supporting collaborative machine learning online. It is an Open Science project that allows its users to share data, code and machine learning experiments.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg" /><media:content medium="image" url="https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenML</title><link href="https://openml.github.io/blog/openml/2016/05/02/OpeML.html" rel="alternate" type="text/html" title="OpenML" /><published>2016-05-02T00:00:00-05:00</published><updated>2016-05-02T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/2016/05/02/OpeML</id><content type="html" xml:base="https://openml.github.io/blog/openml/2016/05/02/OpeML.html">&lt;p&gt;&lt;a href=&quot;http://www.openml.org/&quot;&gt;OpenML&lt;/a&gt; is a very cool new online platform that aims at improving — as the name says — Open Machine Learning. It stands for Open Data, Open Algorithms and Open Research. OpenML is still in it’s beta phase, but already pretty awesome.&lt;/p&gt;
+
+&lt;p&gt;With this blog post I would like to introduce the main concepts, show who should be interested in the platform and I will go a little into a challenge it faces.&lt;/p&gt;
+
+&lt;h1 id=&quot;concepts&quot;&gt;Concepts&lt;/h1&gt;
+
+&lt;p&gt;The following four concepts form the basis of the platform:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;data&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;task&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;flow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;run&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The figure shows how they are connected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1916/0*ZFQLih5r09Vd8bg3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;who-can-make-use-of-openml&quot;&gt;Who can make use of OpenML?&lt;/h1&gt;
+
+&lt;h4 id=&quot;the-domain-scientist&quot;&gt;The domain scientist&lt;/h4&gt;
+
+&lt;p&gt;You have data that you do not know how to analyse best? Upload your data to OpenML and you will have the whole world helping you. Write a good data and task description to make sure people understand the problem.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-data-analyst&quot;&gt;The data analyst&lt;/h4&gt;
+
+&lt;p&gt;You like taking part in challenges? Being the best solver of a task? Go to OpenML and check out the many tasks and go solve!&lt;/p&gt;
+
+&lt;h4 id=&quot;the-algorithm-developer&quot;&gt;The algorithm developer&lt;/h4&gt;
+
+&lt;p&gt;You developed a statistical method or a machine learning algorithm and want to try it out? You will find plenty of data sets and the possibility to make your algorithm public.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-student&quot;&gt;The student&lt;/h4&gt;
+
+&lt;p&gt;You study statistics, data science, machine learning? You want to know what is out there? On OpenML you will find a wide variety of algorithms and, if the solvers do a good job, info on software and implementation.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-teacher&quot;&gt;The teacher&lt;/h4&gt;
+
+&lt;p&gt;You teach a machine learning class and want the students to participate in a challenge? Make up your own task and let the students try solving it. The platform shows who uploaded what and when.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-unknown&quot;&gt;The unknown&lt;/h4&gt;
+
+&lt;p&gt;There are possibly many other people who will benefit from the platform, like meta analysts, benchmarkers and people I can not think of right now.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-use-openml&quot;&gt;How to use OpenML&lt;/h1&gt;
+
+&lt;p&gt;Other than just browsing the website you can access OpenML through quite some interfaces such as &lt;a href=&quot;http://www.openml.org/guide#!r&quot;&gt;R&lt;/a&gt; or &lt;a href=&quot;http://www.openml.org/guide#!plugin_weka&quot;&gt;WEKA&lt;/a&gt;. For an example on how to use the R interface check out the &lt;a href=&quot;http://openml.github.io/openml-r/vignettes/OpenML.html&quot;&gt;tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The whole project is of course open source. Check out the different &lt;a href=&quot;https://github.com/openml&quot;&gt;git repositories&lt;/a&gt; for all the code and in case you have any complaints.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-overfitting-problem&quot;&gt;The overfitting problem&lt;/h1&gt;
+
+&lt;p&gt;Platforms like &lt;a href=&quot;https://www.kaggle.com/&quot;&gt;kaggle&lt;/a&gt;, &lt;a href=&quot;https://www.crowdanalytix.com/&quot;&gt;crowdanalytics&lt;/a&gt; and &lt;a href=&quot;https://www.innocentive.com/&quot;&gt;innocentive&lt;/a&gt; host challenges and give people only part of the data so they can evaluate the performance of the algorithm on a separate data set to (try to) prevent overfitting. So far OpenML does not do that. It always shows all the data, and algorithms are evaluated via resampling procedures (on OpenML called estimation procedures). There are big discussions about how to solve the problem of overfitting on OpenML. They go from keeping part of the data hidden for a certain time in the beginning to doing repeated cross-validation on the (overly) good performing flows on a given task. If you have ideas here, please don’t hesitate to leave me a comment.&lt;/p&gt;
+
+&lt;p&gt;The platform is still in it’s childhood and may not be perfect yet (If you find issues, post them on the &lt;a href=&quot;https://github.com/openml&quot;&gt;github page&lt;/a&gt;). But I think it can grow to be a great thing one day.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Originally published at &lt;a href=&quot;http://heidiseibold.github.io/2016/05/02/OpenML/&quot;&gt;heidiseibold.github.io&lt;/a&gt; on May 2, 2016.&lt;/em&gt;&lt;/p&gt;</content><author><name>Heidi Seibold</name></author><summary type="html">OpenML is a very cool new online platform that aims at improving — as the name says — Open Machine Learning. It stands for Open Data, Open Algorithms and Open Research. OpenML is still in it’s beta phase, but already pretty awesome.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://openml.github.io/blog/images/fastpages_posts/openml-logo.png" /><media:content medium="image" url="https://openml.github.io/blog/images/fastpages_posts/openml-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

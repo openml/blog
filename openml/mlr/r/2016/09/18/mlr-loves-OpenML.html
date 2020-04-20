@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>mlr loves OpenML | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="mlr loves OpenML" />
+<meta name="author" content="Heidi Seibold" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="OpenML with mlr" />
+<meta property="og:description" content="OpenML with mlr" />
+<link rel="canonical" href="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" />
+<meta property="og:url" content="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:image" content="https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Heidi Seibold"},"description":"OpenML with mlr","@type":"BlogPosting","headline":"mlr loves OpenML","url":"https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html","datePublished":"2016-09-18T00:00:00-05:00","dateModified":"2016-09-18T00:00:00-05:00","image":"https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>mlr loves OpenML | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="mlr loves OpenML" />
+<meta name="author" content="Heidi Seibold" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="OpenML with mlr" />
+<meta property="og:description" content="OpenML with mlr" />
+<link rel="canonical" href="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" />
+<meta property="og:url" content="https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:image" content="https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Heidi Seibold"},"description":"OpenML with mlr","@type":"BlogPosting","headline":"mlr loves OpenML","url":"https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html","datePublished":"2016-09-18T00:00:00-05:00","dateModified":"2016-09-18T00:00:00-05:00","image":"https://openml.github.io/blog/images/fastpages_posts/mlropenml.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">OpenML Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About OpenML</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">mlr loves OpenML</h1><p class="page-description">OpenML with mlr</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2016-09-18T00:00:00-05:00" itemprop="datePublished">
+        Sep 18, 2016
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Heidi Seibold</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#OpenML">OpenML</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#mlr">mlr</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#R">R</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#openml-in-r">OpenML in R</a></li>
+<li class="toc-entry toc-h1"><a href="#a-small-case-study">A small case study</a></li>
+<li class="toc-entry toc-h1"><a href="#further-infos">Further infos</a></li>
+</ul><p><a href="http://www.openml.org/">OpenML</a> stands for Open Machine Learning and is an online platform, which aims at supporting collaborative machine learning online. It is an Open Science project that allows its users to share data, code and machine learning experiments.</p>
+
+<p>At the time of writing this blog post I am in Eindhoven at an <a href="http://openml2016dev.openml.org/">OpenML workshop</a>, where developers and scientists meet to work on improving the project. Some of these people are R users and they (we) are developing an <a href="https://github.com/openml/openml-r">R package</a> that communicates with the OpenML platform.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2322/0*zOdJK4jpz2f6u0rW.png" alt=""></p>
+
+<h1 id="openml-in-r">
+<a class="anchor" href="#openml-in-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenML in R</h1>
+
+<p>The OpenML R package can list and download data sets and machine learning tasks (prediction challenges). In R one can run algorithms on the these data sets/tasks and then upload the results to OpenML. After successful uploading, the website shows how well the algorithm performs. To run the algorithm on a given task the OpenML R package builds on the <a href="https://github.com/mlr-org/mlr">mlr</a> package. mlr understands what a task is and can run learners on that task. So all the OpenML package needs to do is convert the OpenML objects to objects mlr understands and then mlr deals with the learning.</p>
+
+<h1 id="a-small-case-study">
+<a class="anchor" href="#a-small-case-study" aria-hidden="true"><span class="octicon octicon-link"></span></a>A small case study</h1>
+
+<p>We want to create a little study on the <a href="http://www.openml.org/">OpenML website</a>, in which we compare different types of Support Vector Machines. The study gets an ID assigned to it, which in our case is 27. We use the function ksvm (with different settings of the function argument type) from package kernlab, which is integrated in mlr (“classif.ksvm”).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1836/0*Z-s6eXOPyynmd_dW.png" alt=""></p>
+
+<p>For details on installing and setting up the OpenML R package please see the <a href="https://github.com/openml/openml-r">guide</a> on GitHub.</p>
+
+<p>Let’s start conducting the study:</p>
+
+<ul>
+  <li>Load the packages and list all tasks which have between 100 and 500 observations.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library("OpenML") library("mlr") library("farff") library("BBmisc")
+
+dsize = c(100, 500) taskinfo_all = listOMLTasks(number.of.instances = dsize)
+</code></pre></div></div>
+
+<ul>
+  <li>Select all supervised classification tasks that do 10-fold cross-validation and choose only one task per data set. To keep the study simple and fast to compute, select only the first three tasks.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskinfo_10cv = subset(taskinfo_all,
+     task.type == "Supervised Classification" &amp;
+     estimation.procedure == "10-fold Crossvalidation" &amp;
+     evaluation.measures == "predictive_accuracy" &amp;
+     number.of.missing.values == 0 &amp;
+     number.of.classes %in% c(2, 4))
+
+taskinfo = taskinfo_10cv[1:3, ]
+</code></pre></div></div>
+
+<ul>
+  <li>Create the learners we want to compare.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lrn.list = list(
+   makeLearner("classif.ksvm", type = "C-svc"),
+   makeLearner("classif.ksvm", type = "kbb-svc"),
+   makeLearner("classif.ksvm", type = "spoc-svc")
+)
+</code></pre></div></div>
+
+<ul>
+  <li>Run the learners on the three tasks.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid = expand.grid(task.id = taskinfo$task.id,
+                   lrn.ind = seq_along(lrn.list))
+
+runs = lapply(seq_row(grid), function(i) {
+  message(i)
+  task = getOMLTask(grid$task.id[i])
+  ind = grid$lrn.ind[i]
+  runTaskMlr(task, lrn.list[[ind]])
+})
+</code></pre></div></div>
+
+<ul>
+  <li>And finally upload the runs to OpenML. The upload function (uploadOMLRun) returns the ID of the uploaded run object. When uploading runs that are part of a certain study, tag it with study_ and the study ID. After uploading the runs appear on the website and can be found using the tag or via the <a href="http://www.openml.org/index.php/s/27">study homepage</a>.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## please do not spam the OpenML server by uploading these
+## tasks. I already did that.
+run.id = lapply(runs, uploadOMLRun, tags = "study_27")
+</code></pre></div></div>
+
+<ul>
+  <li>To show the results of our study, list the run evaluations and make a nice plot.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>evals = listOMLRunEvaluations(tag = "study_27")
+
+evals$task.id = as.factor(evals$task.id)
+evals$setup.id = as.factor(evals$setup.id)
+
+library("ggplot2")
+ggplot(evals, aes(x = setup.id, y = predictive.accuracy,
+                  color = data.name, group = task.id)) +
+  geom_point() + geom_line()
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/1008/1*Xdv2inbezSO9MVu9FJ2-qw.png" alt=""></p>
+
+<p>Now you can go ahead and create a bigger study using the techniques you have learned.</p>
+
+<h1 id="further-infos">
+<a class="anchor" href="#further-infos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further infos</h1>
+
+<p>If you are interested in more, check out the OpenML <a href="https://medium.com/open-machine-learning">blog</a>, the <a href="https://www.researchgate.net/publication/263890323_OpenML_Networked_science_in_machine_learning">paper</a> and the <a href="https://github.com/openml">GitHub repos</a>.</p>
+
+<hr>
+
+<p><em>Originally published at <a href="http://mlr-org.github.io/mlr-loves-OpenML/">mlr-org.github.io</a>.</em></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="openml/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/openml/mlr/r/2016/09/18/mlr-loves-OpenML.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog about OpenML and open machine learning in general.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/openml" title="openml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/open_ml" title="open_ml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

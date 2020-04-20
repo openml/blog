@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>OpenML | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="OpenML" />
+<meta name="author" content="Heidi Seibold" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction to OpenML" />
+<meta property="og:description" content="Introduction to OpenML" />
+<link rel="canonical" href="https://openml.github.io/blog/openml/2016/05/02/OpeML.html" />
+<meta property="og:url" content="https://openml.github.io/blog/openml/2016/05/02/OpeML.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:image" content="https://openml.github.io/blog/images/fastpages_posts/openml-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-05-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Heidi Seibold"},"description":"Introduction to OpenML","@type":"BlogPosting","headline":"OpenML","url":"https://openml.github.io/blog/openml/2016/05/02/OpeML.html","datePublished":"2016-05-02T00:00:00-05:00","dateModified":"2016-05-02T00:00:00-05:00","image":"https://openml.github.io/blog/images/fastpages_posts/openml-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/2016/05/02/OpeML.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>OpenML | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="OpenML" />
+<meta name="author" content="Heidi Seibold" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction to OpenML" />
+<meta property="og:description" content="Introduction to OpenML" />
+<link rel="canonical" href="https://openml.github.io/blog/openml/2016/05/02/OpeML.html" />
+<meta property="og:url" content="https://openml.github.io/blog/openml/2016/05/02/OpeML.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:image" content="https://openml.github.io/blog/images/fastpages_posts/openml-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-05-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Heidi Seibold"},"description":"Introduction to OpenML","@type":"BlogPosting","headline":"OpenML","url":"https://openml.github.io/blog/openml/2016/05/02/OpeML.html","datePublished":"2016-05-02T00:00:00-05:00","dateModified":"2016-05-02T00:00:00-05:00","image":"https://openml.github.io/blog/images/fastpages_posts/openml-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/2016/05/02/OpeML.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">OpenML Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About OpenML</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">OpenML</h1><p class="page-description">Introduction to OpenML</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2016-05-02T00:00:00-05:00" itemprop="datePublished">
+        May 2, 2016
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Heidi Seibold</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#OpenML">OpenML</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#concepts">Concepts</a></li>
+<li class="toc-entry toc-h1"><a href="#who-can-make-use-of-openml">Who can make use of OpenML?</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#the-domain-scientist">The domain scientist</a></li>
+<li class="toc-entry toc-h4"><a href="#the-data-analyst">The data analyst</a></li>
+<li class="toc-entry toc-h4"><a href="#the-algorithm-developer">The algorithm developer</a></li>
+<li class="toc-entry toc-h4"><a href="#the-student">The student</a></li>
+<li class="toc-entry toc-h4"><a href="#the-teacher">The teacher</a></li>
+<li class="toc-entry toc-h4"><a href="#the-unknown">The unknown</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#how-to-use-openml">How to use OpenML</a></li>
+<li class="toc-entry toc-h1"><a href="#the-overfitting-problem">The overfitting problem</a></li>
+</ul><p><a href="http://www.openml.org/">OpenML</a> is a very cool new online platform that aims at improving — as the name says — Open Machine Learning. It stands for Open Data, Open Algorithms and Open Research. OpenML is still in it’s beta phase, but already pretty awesome.</p>
+
+<p>With this blog post I would like to introduce the main concepts, show who should be interested in the platform and I will go a little into a challenge it faces.</p>
+
+<h1 id="concepts">
+<a class="anchor" href="#concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts</h1>
+
+<p>The following four concepts form the basis of the platform:</p>
+
+<ul>
+  <li>
+    <p>data</p>
+  </li>
+  <li>
+    <p>task</p>
+  </li>
+  <li>
+    <p>flow</p>
+  </li>
+  <li>
+    <p>run</p>
+  </li>
+</ul>
+
+<p>The figure shows how they are connected.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1916/0*ZFQLih5r09Vd8bg3.png" alt=""></p>
+
+<h1 id="who-can-make-use-of-openml">
+<a class="anchor" href="#who-can-make-use-of-openml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who can make use of OpenML?</h1>
+
+<h4 id="the-domain-scientist">
+<a class="anchor" href="#the-domain-scientist" aria-hidden="true"><span class="octicon octicon-link"></span></a>The domain scientist</h4>
+
+<p>You have data that you do not know how to analyse best? Upload your data to OpenML and you will have the whole world helping you. Write a good data and task description to make sure people understand the problem.</p>
+
+<h4 id="the-data-analyst">
+<a class="anchor" href="#the-data-analyst" aria-hidden="true"><span class="octicon octicon-link"></span></a>The data analyst</h4>
+
+<p>You like taking part in challenges? Being the best solver of a task? Go to OpenML and check out the many tasks and go solve!</p>
+
+<h4 id="the-algorithm-developer">
+<a class="anchor" href="#the-algorithm-developer" aria-hidden="true"><span class="octicon octicon-link"></span></a>The algorithm developer</h4>
+
+<p>You developed a statistical method or a machine learning algorithm and want to try it out? You will find plenty of data sets and the possibility to make your algorithm public.</p>
+
+<h4 id="the-student">
+<a class="anchor" href="#the-student" aria-hidden="true"><span class="octicon octicon-link"></span></a>The student</h4>
+
+<p>You study statistics, data science, machine learning? You want to know what is out there? On OpenML you will find a wide variety of algorithms and, if the solvers do a good job, info on software and implementation.</p>
+
+<h4 id="the-teacher">
+<a class="anchor" href="#the-teacher" aria-hidden="true"><span class="octicon octicon-link"></span></a>The teacher</h4>
+
+<p>You teach a machine learning class and want the students to participate in a challenge? Make up your own task and let the students try solving it. The platform shows who uploaded what and when.</p>
+
+<h4 id="the-unknown">
+<a class="anchor" href="#the-unknown" aria-hidden="true"><span class="octicon octicon-link"></span></a>The unknown</h4>
+
+<p>There are possibly many other people who will benefit from the platform, like meta analysts, benchmarkers and people I can not think of right now.</p>
+
+<h1 id="how-to-use-openml">
+<a class="anchor" href="#how-to-use-openml" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use OpenML</h1>
+
+<p>Other than just browsing the website you can access OpenML through quite some interfaces such as <a href="http://www.openml.org/guide#!r">R</a> or <a href="http://www.openml.org/guide#!plugin_weka">WEKA</a>. For an example on how to use the R interface check out the <a href="http://openml.github.io/openml-r/vignettes/OpenML.html">tutorial</a>.</p>
+
+<p>The whole project is of course open source. Check out the different <a href="https://github.com/openml">git repositories</a> for all the code and in case you have any complaints.</p>
+
+<h1 id="the-overfitting-problem">
+<a class="anchor" href="#the-overfitting-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The overfitting problem</h1>
+
+<p>Platforms like <a href="https://www.kaggle.com/">kaggle</a>, <a href="https://www.crowdanalytix.com/">crowdanalytics</a> and <a href="https://www.innocentive.com/">innocentive</a> host challenges and give people only part of the data so they can evaluate the performance of the algorithm on a separate data set to (try to) prevent overfitting. So far OpenML does not do that. It always shows all the data, and algorithms are evaluated via resampling procedures (on OpenML called estimation procedures). There are big discussions about how to solve the problem of overfitting on OpenML. They go from keeping part of the data hidden for a certain time in the beginning to doing repeated cross-validation on the (overly) good performing flows on a given task. If you have ideas here, please don’t hesitate to leave me a comment.</p>
+
+<p>The platform is still in it’s childhood and may not be perfect yet (If you find issues, post them on the <a href="https://github.com/openml">github page</a>). But I think it can grow to be a great thing one day.</p>
+
+<hr>
+
+<p><em>Originally published at <a href="http://heidiseibold.github.io/2016/05/02/OpenML/">heidiseibold.github.io</a> on May 2, 2016.</em></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="openml/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/openml/2016/05/02/OpeML.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog about OpenML and open machine learning in general.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/openml" title="openml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/open_ml" title="open_ml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
