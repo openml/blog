@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: OpenML Blog
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+description: A blog about OpenML and open machine learning in general.
 github_username: openml
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
@@ -49,7 +49,7 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
 # Set this to true to display tags on each post
 show_tags: true
