@@ -13,8 +13,7 @@ _powered by [fastpages](https://github.com/fastai/fastpages)_
 ## How to contribute
 Publishing new posts works via Git. The usual way to publish a new story is to:
 * Write your story in Markdown, a Jupyter Notebook, or Word.
-* Clone this repository
-* Copy your post in the correct folder
+* Clone this repository and copy your post in the correct folder
   * '/posts' for [Markdown files](https://github.com/fastai/fastpages#writing-blog-posts-with-markdown)
   * '/notebooks' for [Jupyter notebooks](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
   * '/word' for [Word files](https://github.com/fastai/fastpages#writing-blog-posts-with-microsoft-word)
