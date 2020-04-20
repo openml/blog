@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Exploring new dataset format options for OpenML.org
+description: Understanding the building blocks of OpenML
 categories: [OpenML]
 comments: true
 title: Basic components of OpenML
