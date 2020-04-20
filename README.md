@@ -11,13 +11,12 @@ _powered by [fastpages](https://github.com/fastai/fastpages)_
 
 
 ## How to contribute
-Here are a some helpful links to start writing content:
+The usual way to publish a new story is to:
+* Clone this repository
+* Copy your post in the correct folder
+  * '/posts' for [Markdown files](https://github.com/fastai/fastpages#writing-blog-posts-with-markdown)
+  * '/notebooks' for [Jupyter notebooks](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
+  * '/word' for [Word files](https://github.com/fastai/fastpages#writing-blog-posts-with-microsoft-word)
+* Commit or do a pull request
 
-- [Writing Blogs With Jupyter](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
-
-- [Writing Blogs With Markdown](https://github.com/fastai/fastpages#writing-blog-posts-with-markdown)
-
-- [Writing Blog Posts With Word](https://github.com/fastai/fastpages#writing-blog-posts-with-microsoft-word)
-
-- [(Optional) Preview Your Blog Locally](_fastpages_docs/DEVELOPMENT.md)
-
+For more information on formatting and features, [see the fastpages dpocumentation](https://github.com/fastai/fastpages)
