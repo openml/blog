@@ -5,7 +5,7 @@ description: Exploring new dataset format options for OpenML.org
 categories: [OpenML, Data]
 comments: true
 title: Finding a standard dataset format for machine learning
-image: images/posts/format.png
+image: images/posts/format.jpg
 author: Pieter Gijsbers, Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren
 ---
 
