@@ -5,6 +5,8 @@ description: Exploring new dataset format options for OpenML.org
 categories: [OpenML, Data]
 comments: true
 title: Finding a standard dataset format for machine learning
+image: images/posts/format.png
+author: Pieter Gijsbers, Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren
 ---
 
 With OpenML, we aim to take a worry-free, &#39;zen&#39;-like approach to working with machine learning datasets, making them easy and reliable to use. We want to offer training data that can be easily (or automatically) used. As such, you can now load any dataset and start building models without any manual intervention. For historical reasons, we have done this by internally storing all data in the [ARFF](https://www.cs.waikato.ac.nz/ml/weka/arff.html) data format, which is a simple single-table format, including meta-data such as the correct feature data types.
@@ -159,4 +161,4 @@ React via github: https://github.com/openml/openml-data/issues/29
 
 **Contributors to this blog post:**
 
-Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter 
+Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter Gijsbers
