@@ -17,6 +17,6 @@ Publishing new posts works via Git. The usual way to publish a new story is to:
   * '/posts' for [Markdown files](https://github.com/fastai/fastpages#writing-blog-posts-with-markdown)
   * '/notebooks' for [Jupyter notebooks](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
   * '/word' for [Word files](https://github.com/fastai/fastpages#writing-blog-posts-with-microsoft-word)
-* Commit or do a pull request. We will then review and merge it.
+* Make a pull request to submit a blog post. We will then review and merge it.
 
 For more information on formatting and features, [see the fastpages documentation](https://github.com/fastai/fastpages)
