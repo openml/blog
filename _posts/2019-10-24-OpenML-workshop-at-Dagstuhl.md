@@ -1,10 +1,12 @@
 ---
-
-firstPublishedAt: 1571902428857
-latestPublishedAt: 1571902428857
-slug: openml-workshop-at-dagstuhl
+toc: true
+layout: post
+description: OpenML workshop at Dagstuhl
+categories: [OpenML]
+comments: true
 title: OpenML workshop at Dagstuhl
-
+image: images/fastpages_posts/dagstuhl.jpeg
+author: Heidi Seibold
 ---
 
 **October 2019**

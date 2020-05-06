@@ -5,7 +5,7 @@ description: OpenML with mlr
 categories: [OpenML, mlr, R]
 comments: true
 title: mlr loves OpenML
-image: images/fastpages_posts/mlropenml.jpg
+image: images/fastpages_posts/mlropenml.png
 author: Heidi Seibold
 ---
 

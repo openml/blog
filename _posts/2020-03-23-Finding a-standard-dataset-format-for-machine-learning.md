@@ -130,7 +130,7 @@ Drawbacks:
 
 |   | Parquet | HDF5 | SQLite | CSV |
 | --- | --- | --- | --- | --- |
-| Consistency across different platforms | Check or clarify | ✅ | ✅ | ✅(dialect) |
+| Consistency across <br>different platforms | Check or clarify | ✅ | ✅ | ✅(dialect) |
 | Support and documentation | ✅ | ✅ | ✅ | ✅ |
 | Supports very large and high-dimensional datasets | ✅ | ✅ | ❌(limited nr. columns<br> per table) | ✅ Storing tensors<br> requires flattening. |
 | Simplicity | ✅ | ❌(basically full <br>file system) | ✅(database) | ✅ |
