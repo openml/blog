@@ -1,0 +1,3088 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Open machine learning blog" />
+<meta property="og:description" content="Open machine learning blog" />
+<link rel="canonical" href="https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html" />
+<meta property="og:url" content="https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-08T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Open machine learning blog","@type":"BlogPosting","headline":"Title","url":"https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html","datePublished":"2020-06-08T00:00:00-05:00","dateModified":"2020-06-08T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | OpenML Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Open machine learning blog" />
+<meta property="og:description" content="Open machine learning blog" />
+<link rel="canonical" href="https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html" />
+<meta property="og:url" content="https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html" />
+<meta property="og:site_name" content="OpenML Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-08T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Open machine learning blog","@type":"BlogPosting","headline":"Title","url":"https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html","datePublished":"2020-06-08T00:00:00-05:00","dateModified":"2020-06-08T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">OpenML Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About OpenML</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-08T00:00:00-05:00" itemprop="datePublished">
+        Jun 8, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      23 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/openml/blog/tree/master/_notebooks/OpenML - Machine Learning as a community.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/openml/blog/master?filepath=_notebooks%2FOpenML+-+Machine+Learning+as+a+community.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/openml/blog/blob/master/_notebooks/OpenML - Machine Learning as a community.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/OpenML - Machine Learning as a community.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://www.openml.org/">OpenML</a> is an online Machine Learning (ML) experiments database accessible to everyone for free. The core idea is to have a single repository of datasets and results of ML experiments on them. Despite having gained a lot of popularity in recent years, with a plethora of tools now available, the numerous ML experimentations continue to happen in silos and not necessarily as one whole shared community.
+In this post, we shall try to get a brief glimpse of what OpenML offers and how it can fit our current Machine Learning practices.</p>
+<p>Let us jump straight at getting our hands dirty by building a simple machine learning model. If it is simplicity we are looking for, it has to be the Iris dataset that we shall work with. In the example script below, we are going to load the Iris dataset available with scikit-learn, use 10-fold cross-validation to evaluate a Random Forest of 10 trees. Sounds trivial enough and is indeed less than 10 lines of code.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading Iris dataset</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(150, 4) (150,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initializing a Random Forest with </span>
+<span class="c1"># arbitrary hyperparameters</span>
+<span class="c1"># max_depth kept as 2 since Iris has</span>
+<span class="c1"># only 4 features</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean score : </span><span class="si">{:.5f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean score : 0.94000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A simple script and we achieve a mean accuracy of <strong>95.33%</strong>. That was easy. It is really amazing how far we have come with ML tools that make it easy to get started. As a result, we have hundreds of thousands of people working with these tools every day. That inevitably leads to the reinvention of the wheel. The tasks that each individual ML practitioner performs often have significant overlaps and can be omitted by reusing what someone from the community has done already. At the end of the day, we didn't build a Random Forest model all the way from scratch. We gladly reused code written by generous folks from the community. The special attribute of our species is the ability to work as a collective wherein our combined intellect becomes larger than the individual sum of parts. Why not do the same for ML? I mean, can I see what other ML practitioners have done to get better scores on the Iris dataset?</p>
+<p>Answering this is one of the targets of this post. We shall subsequently explore if this can be done, with the help of <a href="https://www.openml.org/">OpenML</a>. However, first, we shall briefly familiarize ourselves with few terminologies and see how we can split the earlier example we saw into modular components.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OpenML-Components">OpenML Components<a class="anchor-link" href="#OpenML-Components"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+  <img src="./my_icons/openml.png" alt="Image source" />
+  <figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Image source: <a href="https://medium.com/open-machine-learning/openml-1e0d43f0ae13">https://medium.com/open-machine-learning/openml-1e0d43f0ae13</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Dataset</strong>: OpenML houses over 2k+ active datasets for various regression, classification, clustering, survival analysis, stream processing tasks and more. Any user can upload a dataset. Once uploaded, the server computes certain meta-features on the dataset - <em>Number of classes</em>, <em>Number of missing values</em>, <em>Number of features</em>, etc. With respect to our earlier example, the following line is the equivalent of fetching a dataset from OpenML.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Task</strong>: A task is linked to a specific dataset, defining what the target/dependent variable is. Also specifies evaluation measures such as - accuracy, precision, area under curve, etc. or the kind of estimation procedure to be used such as - 10-fold <em>cross-validation</em>, n% holdout set, etc. With respect to our earlier example, the <em>parameters</em> to the following function call capture the idea of a task.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Flow</strong>: Describes the kind of modelling to be performed. It could be a flow or a series of steps, i.e., a scikit-learn pipeline. For now, we have used a simple Random Forest model which is the <em>flow</em> component here.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Run</strong>: Pairs a <em>flow</em> and task together which results in a <em>run</em>. The <em>run</em> has the predictions which are turned into <em>evaluations</em> by the server. This is effectively captured by the <em>execution</em> of the line:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, this may appear a little obfuscating given that we are trying to compartmentalize a simple 10-line code which works just fine. However, if we take a few seconds to go through the 4 components explained above, we can see that it makes our <em>training of a Random Forest</em> on Iris a series of modular tasks. Modules are such a fundamental concept in Computer Science. They are like Lego blocks. Once we have modules, it means we can plug and play at ease. The code snippet below attempts to rewrite the earlier example using the ideas of the OpenML components described, to give a glimpse of what we can potentially gain during experimentations.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="DATASET-component">DATASET component<a class="anchor-link" href="#DATASET-component"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To load IRIS dataset as a dataset module/component</span>
+<span class="k">def</span> <span class="nf">dataset</span><span class="p">():</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="TASK-component">TASK component<a class="anchor-link" href="#TASK-component"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tasks here define the number of cross-validation folds</span>
+<span class="c1"># and the scoring metric to be used for evaluation</span>
+<span class="k">def</span> <span class="nf">task_1</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">()</span>  <span class="c1"># loads IRIS</span>
+    <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+                           <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">task_2</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">()</span>  <span class="c1"># loads IRIS</span>
+    <span class="k">return</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> 
+                           <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;balanced_accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="FLOW-component">FLOW component<a class="anchor-link" href="#FLOW-component"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Flows determine the modelling technique to be applied</span>
+<span class="c1"># Helps define a model irrespective of dataset or tasks</span>
+<span class="k">def</span> <span class="nf">flow_1</span><span class="p">():</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clf</span>
+
+<span class="k">def</span> <span class="nf">flow_2</span><span class="p">():</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clf</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="RUN-component">RUN component<a class="anchor-link" href="#RUN-component"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Runs essentially evaluates a task-flow pairing </span>
+<span class="c1"># and therefore in effect executs the modelling </span>
+<span class="c1"># of a dataset as per the task task definition</span>
+<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">flow</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Results for Random Forest</span>
+<span class="n">rf_task_1</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">task_1</span><span class="p">,</span> <span class="n">flow_1</span><span class="p">())</span>
+<span class="n">rf_task_2</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">task_2</span><span class="p">,</span> <span class="n">flow_1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RF using task 1: </span><span class="si">{:&lt;.5}</span><span class="s2">; task 2: </span><span class="si">{:&lt;.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_task_1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">rf_task_2</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+
+<span class="c1"># Results for SVM</span>
+<span class="n">svm_task_1</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">task_1</span><span class="p">,</span> <span class="n">flow_2</span><span class="p">())</span>
+<span class="n">svm_task_2</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">task_2</span><span class="p">,</span> <span class="n">flow_2</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SVM using task 1: </span><span class="si">{:&lt;.5}</span><span class="s2">; task 2: </span><span class="si">{:&lt;.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">svm_task_1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">svm_task_2</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>RF using task 1: 0.95333; task 2: 0.94444
+SVM using task 1: 0.98; task 2: 0.97222
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can, therefore, compose various different tasks, flows, which are independent operations. Runs can then pair any such task and flow to construct an ML <em>workflow</em> and return the evaluated scores. This approach can help us define such components one-time, and we can extend this for any combination of a dataset, model, and for any number of evaluations in the future. Imagine if the entire ML <em>community</em> defines such tasks and various simple to complicated flows that they use in their daily practice. We can build custom working ML pipeline and even get to compare performances of our techniques on the same <em>task</em> with others! OpenML aims exactly for that. In the next section of this post, we shall scratch the surface of OpenML to see if we can actually do with OpenML what it promises.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-OpenML">Using OpenML<a class="anchor-link" href="#Using-OpenML"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>OpenML-Python can be installed using <em>pip</em> or by <a href="https://openml.github.io/openml-python/develop/contributing.html#installation">cloning the git repo</a> and installing the current development version. So shall we then install OpenML? ;) It will be beneficial if the code snippets are tried out as this post is read. A consolidated Jupyter notebook with all the code can be found <a href="https://nbviewer.jupyter.org/github/Neeratyoy/openml-python/blob/blog/OpenML%20-%20Machine%20Learning%20as%20a%20community.ipynb">here</a>.</p>
+<p>Now that we have OpenML, let us jump straight into figuring out how we can get the Iris dataset from there. We can always browse the<a href="https://www.openml.org/">OpenML website</a> and search for Iris. That is the easy route. Let us get familiar with the programmatic approach and learn how to fish instead. The OpenML-Python API can be found <a href="https://openml.github.io/openml-python/develop/api.html">here</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retrieving-Iris-from&#160;OpenML">Retrieving Iris from&#160;OpenML<a class="anchor-link" href="#Retrieving-Iris-from&#160;OpenML"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the example below, we will list out all possible datasets available in OpenML. We can choose the output format. I'll go with <em>dataframe</em> so that we obtain a pandas DataFrame and can get a neat tabular representation to search and sort specific entries.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching the list of all available datasets on OpenML</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">list_datasets</span><span class="p">(</span><span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;dataframe&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Listing column names or attributes that OpenML offers</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(3073, 16)
+did
+name
+version
+uploader
+status
+format
+MajorityClassSize
+MaxNominalAttDistinctValues
+MinorityClassSize
+NumberOfClasses
+NumberOfFeatures
+NumberOfInstances
+NumberOfInstancesWithMissingValues
+NumberOfMissingValues
+NumberOfNumericFeatures
+NumberOfSymbolicFeatures
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   did        name  version uploader  status format  MajorityClassSize  \
+2    2      anneal        1        1  active   ARFF              684.0   
+3    3    kr-vs-kp        1        1  active   ARFF             1669.0   
+4    4       labor        1        1  active   ARFF               37.0   
+5    5  arrhythmia        1        1  active   ARFF              245.0   
+6    6      letter        1        1  active   ARFF              813.0   
+
+   MaxNominalAttDistinctValues  MinorityClassSize  NumberOfClasses  \
+2                          7.0                8.0              5.0   
+3                          3.0             1527.0              2.0   
+4                          3.0               20.0              2.0   
+5                         13.0                2.0             13.0   
+6                         26.0              734.0             26.0   
+
+   NumberOfFeatures  NumberOfInstances  NumberOfInstancesWithMissingValues  \
+2              39.0              898.0                               898.0   
+3              37.0             3196.0                                 0.0   
+4              17.0               57.0                                56.0   
+5             280.0              452.0                               384.0   
+6              17.0            20000.0                                 0.0   
+
+   NumberOfMissingValues  NumberOfNumericFeatures  NumberOfSymbolicFeatures  
+2                22175.0                      6.0                      33.0  
+3                    0.0                      0.0                      37.0  
+4                  326.0                      8.0                       9.0  
+5                  408.0                    206.0                      74.0  
+6                    0.0                     16.0                       1.0  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The column names indicate that they contain the meta-information about each of the datasets, and at this instance, we have access to <strong>2958</strong> datasets as indicated by the shape of the dataframe. We shall try searching for 'iris' in the column <em>name</em> and also use the <em>version</em> column to sort the results.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtering dataset list to have &#39;iris&#39; in the &#39;name&#39; column</span>
+<span class="c1"># then sorting the list based on the &#39;version&#39;</span>
+<span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;version&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>did</th>
+      <th>name</th>
+      <th>version</th>
+      <th>uploader</th>
+      <th>status</th>
+      <th>format</th>
+      <th>MajorityClassSize</th>
+      <th>MaxNominalAttDistinctValues</th>
+      <th>MinorityClassSize</th>
+      <th>NumberOfClasses</th>
+      <th>NumberOfFeatures</th>
+      <th>NumberOfInstances</th>
+      <th>NumberOfInstancesWithMissingValues</th>
+      <th>NumberOfMissingValues</th>
+      <th>NumberOfNumericFeatures</th>
+      <th>NumberOfSymbolicFeatures</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>61</th>
+      <td>61</td>
+      <td>iris</td>
+      <td>1</td>
+      <td>1</td>
+      <td>active</td>
+      <td>ARFF</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>150.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>41950</th>
+      <td>41950</td>
+      <td>iris_test_upload</td>
+      <td>1</td>
+      <td>4030</td>
+      <td>active</td>
+      <td>ARFF</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>150.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>42261</th>
+      <td>42261</td>
+      <td>iris-example</td>
+      <td>1</td>
+      <td>348</td>
+      <td>active</td>
+      <td>ARFF</td>
+      <td>50.0</td>
+      <td>NaN</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>150.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>451</th>
+      <td>451</td>
+      <td>irish</td>
+      <td>1</td>
+      <td>2</td>
+      <td>active</td>
+      <td>ARFF</td>
+      <td>278.0</td>
+      <td>10.0</td>
+      <td>222.0</td>
+      <td>2.0</td>
+      <td>6.0</td>
+      <td>500.0</td>
+      <td>32.0</td>
+      <td>32.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>969</th>
+      <td>969</td>
+      <td>iris</td>
+      <td>3</td>
+      <td>2</td>
+      <td>active</td>
+      <td>ARFF</td>
+      <td>100.0</td>
+      <td>2.0</td>
+      <td>50.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>150.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Okay, so the iris dataset with the version as 1 has an ID of <strong>61</strong>. For verification, we can check the <a href="https://www.openml.org/d/61">website for dataset ID 61</a>. We can see that it is the original Iris dataset which is of interest to us - 3 classes of 50 instances, with 4 numeric features. However, we shall retrieve the same information, as promised, programmatically.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="mi">61</span><span class="p">)</span>
+<span class="n">iris</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Dataset
+==============
+Name..........: iris
+Version.......: 1
+Format........: ARFF
+Upload Date...: 2014-04-06 23:23:39
+Licence.......: Public
+Download URL..: https://www.openml.org/data/v1/download/61/iris.arff
+OpenML URL....: https://www.openml.org/d/61
+# of features.: 5
+# of instances: 150</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0: [0 - sepallength (numeric)],
+ 1: [1 - sepalwidth (numeric)],
+ 2: [2 - petallength (numeric)],
+ 3: [3 - petalwidth (numeric)],
+ 4: [4 - class (nominal)]}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>**Author**: R.A. Fisher  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Iris) - 1936 - Donated by Michael Marshall  
+**Please cite**:   
+
+**Iris Plants Database**  
+This is perhaps the best known database to be found in the pattern recognition literature.  Fisher&#39;s paper is a classic in the field and is referenced frequently to this day.  (See Duda &amp; Hart, for example.)  The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.  One class is     linearly separable from the other 2; the latter are NOT linearly separable from each other.
+
+Predicted attribute: class of iris plant.  
+This is an exceedingly simple domain.  
+ 
+### Attribute Information:
+    1. sepal length in cm
+    2. sepal width in cm
+    3. petal length in cm
+    4. petal width in cm
+    5. class: 
+       -- Iris Setosa
+       -- Iris Versicolour
+       -- Iris Virginica
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With the appropriate dataset available, let us briefly go back to the terminologies we discussed earlier. We have only used the <em>dataset</em> component so far. The <em>dataset</em> component is closely tied with the task component. To reiterate, the task would describe <em>how</em> the dataset will be used.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retrieving-relevant-tasks-from&#160;OpenML">Retrieving relevant tasks from&#160;OpenML<a class="anchor-link" href="#Retrieving-relevant-tasks-from&#160;OpenML"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall firstly list all available tasks that work with the Iris dataset. However, we are only treating Iris as a supervised classification problem and hence will filter accordingly. Following which, we will collect only the task IDs of the tasks relevant to us.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">list_tasks</span><span class="p">(</span><span class="n">data_id</span><span class="o">=</span><span class="mi">61</span><span class="p">,</span> <span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;dataframe&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tid</th>
+      <th>ttid</th>
+      <th>did</th>
+      <th>name</th>
+      <th>task_type</th>
+      <th>status</th>
+      <th>estimation_procedure</th>
+      <th>evaluation_measures</th>
+      <th>source_data</th>
+      <th>target_feature</th>
+      <th>...</th>
+      <th>NumberOfFeatures</th>
+      <th>NumberOfInstances</th>
+      <th>NumberOfInstancesWithMissingValues</th>
+      <th>NumberOfMissingValues</th>
+      <th>NumberOfNumericFeatures</th>
+      <th>NumberOfSymbolicFeatures</th>
+      <th>number_samples</th>
+      <th>cost_matrix</th>
+      <th>quality_measure</th>
+      <th>target_value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>59</th>
+      <td>59</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>10-fold Crossvalidation</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>118</td>
+      <td>3</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Learning Curve</td>
+      <td>active</td>
+      <td>10 times 10-fold Learning Curve</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>289</th>
+      <td>289</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>33% Holdout set</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1758</th>
+      <td>1758</td>
+      <td>3</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Learning Curve</td>
+      <td>active</td>
+      <td>10-fold Learning Curve</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1823</th>
+      <td>1823</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>5 times 2-fold Crossvalidation</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtering only the Supervised Classification tasks on Iris</span>
+<span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;task_type==&#39;Supervised Classification&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tid</th>
+      <th>ttid</th>
+      <th>did</th>
+      <th>name</th>
+      <th>task_type</th>
+      <th>status</th>
+      <th>estimation_procedure</th>
+      <th>evaluation_measures</th>
+      <th>source_data</th>
+      <th>target_feature</th>
+      <th>...</th>
+      <th>NumberOfFeatures</th>
+      <th>NumberOfInstances</th>
+      <th>NumberOfInstancesWithMissingValues</th>
+      <th>NumberOfMissingValues</th>
+      <th>NumberOfNumericFeatures</th>
+      <th>NumberOfSymbolicFeatures</th>
+      <th>number_samples</th>
+      <th>cost_matrix</th>
+      <th>quality_measure</th>
+      <th>target_value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>59</th>
+      <td>59</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>10-fold Crossvalidation</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>289</th>
+      <td>289</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>33% Holdout set</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1823</th>
+      <td>1823</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>5 times 2-fold Crossvalidation</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1939</th>
+      <td>1939</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>10 times 10-fold Crossvalidation</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1992</th>
+      <td>1992</td>
+      <td>1</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>Supervised Classification</td>
+      <td>active</td>
+      <td>Leave one out</td>
+      <td>predictive_accuracy</td>
+      <td>61</td>
+      <td>class</td>
+      <td>...</td>
+      <td>5</td>
+      <td>150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Collecting all relevant task_ids</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;task_type==&#39;Supervised Classification&#39;&quot;</span><span class="p">)[</span><span class="s1">&#39;tid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tasks</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>That settles the <em>task</em> component too. Notice how for one <em>dataset</em> (61), we obtain 11 task IDs which are of interest to us. This should illustrate the <em>one-to-many</em> relationship that <em>dataset-task components</em> can have. We have 2 more components to explore - <em>flows</em>, <em>runs</em>. We could list out all possible flows and filter out the ones we want, i.e., Random Forest. However, let us instead fetch all the evaluations made on the Iris dataset using the 11 tasks we collected above.</p>
+<p>We shall subsequently work with the scikit-learn based task which has been uploaded/used the most. We shall then further filter out the list of evaluations from the selected task (task_id=59 in this case), depending on if Random Forest was used.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Listing all evaluations made on the 11 tasks collected above</span>
+<span class="c1"># with evaluation metric as &#39;predictive_accuracy&#39;</span>
+<span class="n">task_df</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">evaluations</span><span class="o">.</span><span class="n">list_evaluations</span><span class="p">(</span><span class="n">function</span><span class="o">=</span><span class="s1">&#39;predictive_accuracy&#39;</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="n">tasks</span><span class="p">,</span> <span class="n">output_format</span><span class="o">=</span><span class="s1">&#39;dataframe&#39;</span><span class="p">)</span>
+<span class="n">task_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>run_id</th>
+      <th>task_id</th>
+      <th>setup_id</th>
+      <th>flow_id</th>
+      <th>flow_name</th>
+      <th>data_id</th>
+      <th>data_name</th>
+      <th>function</th>
+      <th>upload_time</th>
+      <th>uploader</th>
+      <th>uploader_name</th>
+      <th>value</th>
+      <th>values</th>
+      <th>array_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>81</td>
+      <td>59</td>
+      <td>12</td>
+      <td>67</td>
+      <td>weka.BayesNet_K2(1)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2014-04-07 00:05:11</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.940000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>161</td>
+      <td>59</td>
+      <td>13</td>
+      <td>70</td>
+      <td>weka.SMO_PolyKernel(1)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2014-04-07 00:55:32</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>234</td>
+      <td>59</td>
+      <td>1</td>
+      <td>56</td>
+      <td>weka.ZeroR(1)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2014-04-07 01:33:24</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.333333</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>447</td>
+      <td>59</td>
+      <td>6</td>
+      <td>61</td>
+      <td>weka.REPTree(1)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2014-04-07 06:26:27</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.926667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>473</td>
+      <td>59</td>
+      <td>18</td>
+      <td>77</td>
+      <td>weka.LogitBoost_DecisionStump(1)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2014-04-07 06:39:27</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.946667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtering based on sklearn (scikit-learn)</span>
+<span class="n">task_df</span> <span class="o">=</span> <span class="n">task_df</span><span class="p">[</span><span class="n">task_df</span><span class="p">[</span><span class="s1">&#39;flow_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;sklearn&quot;</span><span class="p">)]</span>
+<span class="n">task_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>run_id</th>
+      <th>task_id</th>
+      <th>setup_id</th>
+      <th>flow_id</th>
+      <th>flow_name</th>
+      <th>data_id</th>
+      <th>data_name</th>
+      <th>function</th>
+      <th>upload_time</th>
+      <th>uploader</th>
+      <th>uploader_name</th>
+      <th>value</th>
+      <th>values</th>
+      <th>array_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>144</th>
+      <td>1849043</td>
+      <td>59</td>
+      <td>29015</td>
+      <td>5500</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-03-03 17:10:12</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.946667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>1853409</td>
+      <td>59</td>
+      <td>30950</td>
+      <td>5873</td>
+      <td>sklearn.pipeline.Pipeline(Imputer=openml.utils...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-03-21 22:08:01</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6130126</td>
+      <td>59</td>
+      <td>4163633</td>
+      <td>7108</td>
+      <td>sklearn.model_selection._search.RandomizedSear...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-08-21 11:07:40</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6130128</td>
+      <td>59</td>
+      <td>4163634</td>
+      <td>7108</td>
+      <td>sklearn.model_selection._search.RandomizedSear...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-08-21 11:08:06</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.946667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6715383</td>
+      <td>59</td>
+      <td>4747289</td>
+      <td>7117</td>
+      <td>sklearn.model_selection._search.RandomizedSear...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-09-01 02:56:44</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Counting frequency of the different tasks used to</span>
+<span class="c1"># solve Iris as a supervised classification using scikit-learn</span>
+<span class="n">task_df</span><span class="p">[</span><span class="s1">&#39;task_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>59       1985
+10107      25
+289         1
+Name: task_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Retrieving the most used task</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">59</span><span class="p">)</span>
+<span class="n">t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Classification Task
+==========================
+Task Type Description: https://www.openml.org/tt/1
+Task ID..............: 59
+Task URL.............: https://www.openml.org/t/59
+Estimation Procedure.: crossvalidation
+Evaluation Measure...: predictive_accuracy
+Target Feature.......: class
+# of Classes.........: 3
+Cost Matrix..........: Available</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtering for only task_id=59</span>
+<span class="n">task_df</span> <span class="o">=</span> <span class="n">task_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;task_id==59&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtering based on Random Forest</span>
+<span class="n">task_rf</span> <span class="o">=</span>  <span class="n">task_df</span><span class="p">[</span><span class="n">task_df</span><span class="p">[</span><span class="s1">&#39;flow_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;RandomForest&quot;</span><span class="p">)]</span>
+<span class="n">task_rf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>run_id</th>
+      <th>task_id</th>
+      <th>setup_id</th>
+      <th>flow_id</th>
+      <th>flow_name</th>
+      <th>data_id</th>
+      <th>data_name</th>
+      <th>function</th>
+      <th>upload_time</th>
+      <th>uploader</th>
+      <th>uploader_name</th>
+      <th>value</th>
+      <th>values</th>
+      <th>array_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>144</th>
+      <td>1849043</td>
+      <td>59</td>
+      <td>29015</td>
+      <td>5500</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-03-03 17:10:12</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.946667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>1853409</td>
+      <td>59</td>
+      <td>30950</td>
+      <td>5873</td>
+      <td>sklearn.pipeline.Pipeline(Imputer=openml.utils...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-03-21 22:08:01</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6130126</td>
+      <td>59</td>
+      <td>4163633</td>
+      <td>7108</td>
+      <td>sklearn.model_selection._search.RandomizedSear...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-08-21 11:07:40</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6130128</td>
+      <td>59</td>
+      <td>4163634</td>
+      <td>7108</td>
+      <td>sklearn.model_selection._search.RandomizedSear...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-08-21 11:08:06</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.946667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>6946499</td>
+      <td>59</td>
+      <td>4978397</td>
+      <td>7109</td>
+      <td>sklearn.pipeline.Pipeline(imputation=openmlstu...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-09-02 22:06:32</td>
+      <td>1</td>
+      <td>janvanrijn@gmail.com</td>
+      <td>0.920000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retrieving-top-performing-models-from&#160;OpenML">Retrieving top-performing models from&#160;OpenML<a class="anchor-link" href="#Retrieving-top-performing-models-from&#160;OpenML"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since we are an ambitious bunch of ML practitioners who settle for nothing but the best, and also since most results will not be considered worth the effort if not matching or beating <em>state-of-the-art</em>, we shall aim for the best scores. We'll sort the filtered results we obtained based on the score or '<em>value</em>' and then extract the components from that run - <em>task</em> and <em>flow</em>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">task_rf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>run_id</th>
+      <th>task_id</th>
+      <th>setup_id</th>
+      <th>flow_id</th>
+      <th>flow_name</th>
+      <th>data_id</th>
+      <th>data_name</th>
+      <th>function</th>
+      <th>upload_time</th>
+      <th>uploader</th>
+      <th>uploader_name</th>
+      <th>value</th>
+      <th>values</th>
+      <th>array_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3549</th>
+      <td>523926</td>
+      <td>59</td>
+      <td>3526</td>
+      <td>2629</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier(8)</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2016-02-11 22:05:23</td>
+      <td>869</td>
+      <td>p.gijsbers@student.tue.nl</td>
+      <td>0.966667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4353</th>
+      <td>8955370</td>
+      <td>59</td>
+      <td>6890988</td>
+      <td>7257</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2018-04-06 16:32:22</td>
+      <td>3964</td>
+      <td>clear.tsai@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3587</th>
+      <td>1852682</td>
+      <td>59</td>
+      <td>29263</td>
+      <td>5500</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-03-15 22:55:18</td>
+      <td>1022</td>
+      <td>rso@randalolson.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4375</th>
+      <td>8886608</td>
+      <td>59</td>
+      <td>6835139</td>
+      <td>7961</td>
+      <td>sklearn.pipeline.Pipeline(Imputer=sklearn.prep...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2018-03-17 16:46:27</td>
+      <td>5032</td>
+      <td>rashmi.kamath01@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3107</th>
+      <td>1843272</td>
+      <td>59</td>
+      <td>24071</td>
+      <td>4830</td>
+      <td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2016-12-08 20:10:03</td>
+      <td>2</td>
+      <td>joaquin.vanschoren@gmail.com</td>
+      <td>0.960000</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching the Random Forest flow with the best score</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">get_flow</span><span class="p">(</span><span class="mi">2629</span><span class="p">)</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Flow
+===========
+Flow ID.........: 2629 (version 8)
+Flow URL........: https://www.openml.org/f/2629
+Flow Name.......: sklearn.ensemble.forest.RandomForestClassifier
+Flow Description: Flow generated by openml_run
+Upload Date.....: 2016-02-11 21:17:08
+Dependencies....: None</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching the run with the best score for</span>
+<span class="c1"># Random Forest on Iris</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">get_run</span><span class="p">(</span><span class="mi">523926</span><span class="p">)</span>
+<span class="n">r</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Run
+==========
+Uploader Name...: Pieter Gijsbers
+Uploader Profile: https://www.openml.org/u/869
+Metric..........: predictive_accuracy
+Result..........: 0.966667
+Run ID..........: 523926
+Run URL.........: https://www.openml.org/r/523926
+Task ID.........: 59
+Task Type.......: Supervised Classification
+Task URL........: https://www.openml.org/t/59
+Flow ID.........: 2629
+Flow Name.......: sklearn.ensemble.forest.RandomForestClassifier(8)
+Flow URL........: https://www.openml.org/f/2629
+Setup ID........: 3526
+Setup String....: None
+Dataset ID......: 61
+Dataset URL.....: https://www.openml.org/d/61</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Okay, let's take a pause and re-assess. From multiple users across the globe, who had uploaded runs to OpenML, for a Random Forest run on the Iris, the best score seen till now is <strong>96.67%</strong>. That is certainly better than the naive model we built at the beginning to achieve <strong>95.33%</strong>. We had used a basic 10-fold cross-validation to evaluate a Random Forest of 10 trees with a max depth of 2. Let us see, what the best run uses and if it differs from our approach.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The scoring metric used</span>
+<span class="n">t</span><span class="o">.</span><span class="n">evaluation_measure</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;predictive_accuracy&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The methodology used for estimations</span>
+<span class="n">t</span><span class="o">.</span><span class="n">estimation_procedure</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;type&#39;: &#39;crossvalidation&#39;,
+ &#39;parameters&#39;: {&#39;number_repeats&#39;: &#39;1&#39;,
+  &#39;number_folds&#39;: &#39;10&#39;,
+  &#39;percentage&#39;: &#39;&#39;,
+  &#39;stratified_sampling&#39;: &#39;true&#39;},
+ &#39;data_splits_url&#39;: &#39;https://www.openml.org/api_splits/get/59/Task_59_splits.arff&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The model used</span>
+<span class="n">f</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;sklearn.ensemble.forest.RandomForestClassifier&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The model parameters</span>
+<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">parameter_settings</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;oml:name&#39;</span><span class="p">],</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;oml:value&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&lt;25}</span><span class="s2"> : </span><span class="si">{:&lt;10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>warm_start                : False     
+oob_score                 : False     
+n_jobs                    : 1         
+verbose                   : 0         
+max_leaf_nodes            : None      
+bootstrap                 : True      
+min_samples_leaf          : 1         
+n_estimators              : 10        
+min_samples_split         : 2         
+min_weight_fraction_leaf  : 0.0       
+criterion                 : gini      
+random_state              : None      
+max_features              : auto      
+max_depth                 : None      
+class_weight              : None      
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As evident, our initial approach is different on two fronts. We didn't explicitly use stratified sampling for our cross-validation. While the Random Forest hyperparameters are slightly different too (<em>max_depth=None</em>). That definitely sounds like a <em>to-do</em>, however, there is no reason why we should restrict ourselves to Random Forests. Remember, we are aiming <em>big</em> here. Given the <a href="https://www.openml.org/search?type=user">number of OpenML users</a>, there must be somebody who got a better score on Iris with some other model. Let us then retrieve that information. Programmatically, of course.</p>
+<p>In summary, we are now going to sort the performance of all scikit-learn based models on Iris dataset as per the task definition with <em>task_id=59</em>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching top performances</span>
+<span class="n">task_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>run_id</th>
+      <th>task_id</th>
+      <th>setup_id</th>
+      <th>flow_id</th>
+      <th>flow_name</th>
+      <th>data_id</th>
+      <th>data_name</th>
+      <th>function</th>
+      <th>upload_time</th>
+      <th>uploader</th>
+      <th>uploader_name</th>
+      <th>value</th>
+      <th>values</th>
+      <th>array_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3630</th>
+      <td>2039748</td>
+      <td>59</td>
+      <td>180922</td>
+      <td>6048</td>
+      <td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-04-09 01:09:01</td>
+      <td>1104</td>
+      <td>jmapvhoof@gmail.com</td>
+      <td>0.986667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3631</th>
+      <td>2039750</td>
+      <td>59</td>
+      <td>180924</td>
+      <td>6048</td>
+      <td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-04-09 01:17:39</td>
+      <td>1104</td>
+      <td>jmapvhoof@gmail.com</td>
+      <td>0.986667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3624</th>
+      <td>2012939</td>
+      <td>59</td>
+      <td>157622</td>
+      <td>6048</td>
+      <td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-04-06 23:29:28</td>
+      <td>1104</td>
+      <td>jmapvhoof@gmail.com</td>
+      <td>0.986667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3618</th>
+      <td>2012930</td>
+      <td>59</td>
+      <td>157613</td>
+      <td>6048</td>
+      <td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-04-06 23:00:24</td>
+      <td>1104</td>
+      <td>jmapvhoof@gmail.com</td>
+      <td>0.986667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3626</th>
+      <td>2012941</td>
+      <td>59</td>
+      <td>157624</td>
+      <td>6048</td>
+      <td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+      <td>61</td>
+      <td>iris</td>
+      <td>predictive_accuracy</td>
+      <td>2017-04-07 01:36:00</td>
+      <td>1104</td>
+      <td>jmapvhoof@gmail.com</td>
+      <td>0.986667</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching best performing flow</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">get_flow</span><span class="p">(</span><span class="mi">6048</span><span class="p">)</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Flow
+===========
+Flow ID.........: 6048 (version 1)
+Flow URL........: https://www.openml.org/f/6048
+Flow Name.......: sklearn.pipeline.Pipeline(dualimputer=helper.dual_imputer.DualImputer,nusvc=sklearn.svm.classes.NuSVC)
+Flow Description: Automatically created scikit-learn flow.
+Upload Date.....: 2017-04-06 22:42:59
+Dependencies....: sklearn==0.18.1
+numpy&gt;=1.6.1
+scipy&gt;=0.9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fetching best performing run</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">get_run</span><span class="p">(</span><span class="mi">2012943</span><span class="p">)</span>
+
+<span class="c1"># The model parameters</span>
+<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">parameter_settings</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;oml:name&#39;</span><span class="p">],</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;oml:value&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&lt;25}</span><span class="s2"> : </span><span class="si">{:&lt;10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>steps                     : [(&#39;DualImputer&#39;, &lt;helper.dual_imputer.DualImputer object at 0x7ff618e4d908&gt;), (&#39;nusvc&#39;, NuSVC(cache_size=200, class_weight=None, coef0=0.0,
+   decision_function_shape=None, degree=3, gamma=&#39;auto&#39;, kernel=&#39;linear&#39;,
+   max_iter=-1, nu=0.3, probability=True, random_state=3, shrinking=True,
+   tol=3.2419092644286417e-05, verbose=False))]
+cache_size                : 200       
+class_weight              : None      
+coef0                     : 0.0       
+decision_function_shape   : None      
+degree                    : 3         
+gamma                     : auto      
+kernel                    : linear    
+max_iter                  : -1        
+nu                        : 0.3       
+probability               : True      
+random_state              : 3         
+shrinking                 : True      
+tol                       : 3.24190926443e-05
+verbose                   : False     
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The highest score obtained among the uploaded results is <strong>98.67%</strong> using a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html#sklearn.svm.NuSVC">variant of SVM</a>. However, if we check the corresponding flow description, we see that it is using an old scikit-learn version (0.18.1) and therefore may not be possible to replicate the exact results. However, in order to improve from our score of 95.33%, we should try running a <em>nu-SVC</em> on the same problem and see where we stand. Let's go for it. Via OpenML, of course.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Running-best-performing-flow-on-the-required&#160;task">Running best performing flow on the required&#160;task<a class="anchor-link" href="#Running-best-performing-flow-on-the-required&#160;task"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">NuSVC</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Building the NuSVC model object with parameters found</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">NuSVC</span><span class="p">(</span><span class="n">cache_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coef0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+   <span class="n">decision_function_shape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+   <span class="n">max_iter</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">nu</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">shrinking</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+   <span class="n">tol</span><span class="o">=</span><span class="mf">3.2419092644286417e-05</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Obtaining task used earlier</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">59</span><span class="p">)</span>
+<span class="n">t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Classification Task
+==========================
+Task Type Description: https://www.openml.org/tt/1
+Task ID..............: 59
+Task URL.............: https://www.openml.org/t/59
+Estimation Procedure.: crossvalidation
+Evaluation Measure...: predictive_accuracy
+Target Feature.......: class
+# of Classes.........: 3
+Cost Matrix..........: Available</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Running the model on the task</span>
+<span class="c1"># Internally, the model will be made into </span>
+<span class="c1"># an OpenML flow and we can choose to retrieve it</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="n">upload_flow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_flow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Flow
+===========
+Flow Name.......: sklearn.svm.classes.NuSVC
+Flow Description: Nu-Support Vector Classification.
+
+Similar to SVC but uses a parameter to control the number of support
+vectors.
+
+The implementation is based on libsvm.
+Dependencies....: sklearn==0.21.3
+numpy&gt;=1.6.1
+scipy&gt;=0.9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To obtain the score (without uploading)</span>
+<span class="c1">## r.publish() can be used to upload these results</span>
+<span class="c1">## need to sign-in to https://www.openml.org/</span>
+<span class="n">score</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">evaluations</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">fold_evaluations</span><span class="p">[</span><span class="s1">&#39;predictive_accuracy&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">evaluations</span><span class="p">:</span>
+    <span class="n">score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">evaluations</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.9866666666666667
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lo and behold! We hit the magic number. I personally would have never tried out NuSVC and would have stuck around tweaking hyperparameters of the Random Forest. This is a new discovery of sorts for sure. I wonder though if anybody has tried XGBoost on Iris?</p>
+<p>In any case, we can now upload the results of this run to OpenML using:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OpenML Run
+==========
+Uploader Name: None
+Metric.......: None
+Run ID.......: 10464835
+Run URL......: https://www.openml.org/r/10464835
+Task ID......: 59
+Task Type....: None
+Task URL.....: https://www.openml.org/t/59
+Flow ID......: 18579
+Flow Name....: sklearn.svm.classes.NuSVC
+Flow URL.....: https://www.openml.org/f/18579
+Setup ID.....: None
+Setup String.: Python_3.6.9. Sklearn_0.21.3. NumPy_1.16.4. SciPy_1.4.1. NuSVC(cache_size=200, class_weight=None, coef0=0.0,
+      decision_function_shape=None, degree=3, gamma=&#39;auto&#39;, kernel=&#39;linear&#39;,
+      max_iter=-1, nu=0.3, probability=True, random_state=3, shrinking=True,
+      tol=3.241909264428642e-05, verbose=False)
+Dataset ID...: 61
+Dataset URL..: https://www.openml.org/d/61</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One would need to sign-in to <a href="https://www.openml.org/">https://www.openml.org/</a> and generate their respective <em>apikey</em>. The results would then be available for everyone to view and who knows, you can have your name against the <em>best-ever</em> performance measured on the Iris dataset!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This post was in no ways intended to be a be-all-end-all guide to OpenML. The primary goal was to help form an acquaintance with the OpenML terminologies, introduce the API, establish connections with the general ML practices, and give a sneak-peek into the potential benefits of working together as a <em>community</em>. For a better understanding of OpenML, please explore the <a href="https://openml.github.io/openml-python/develop/usage.html#usage">documentation</a>. If one desires to continue from the examples given in this post and explore further, kindly refer to the <a href="https://openml.github.io/openml-python/develop/api.html">API</a>.</p>
+<p>OpenML-Python is an open-source project and contributions from everyone in the form of Issues and Pull Requests are most welcome. Contribution to the OpenML community is in fact not limited to code contribution. Every single user can make the community richer by sharing data, experiments, results, using OpenML.</p>
+<p>As ML practitioners, we may be dependent on tools for our tasks. However, as a collective, we can juice out its potential to a larger extent. Let us together, make ML more transparent, more democratic!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Special thanks to Heidi, Bilge, Sahithya, Matthias, Ashwin for the ideas, feedback, and support.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Related readings:</p>
+<ul>
+<li><a href="https://openml.github.io/openml-python/develop/">To get started with OpenML-Python</a></li>
+<li><a href="https://github.com/openml/openml-python">OpenML-Python Github</a></li>
+<li><a href="https://www.openml.org/">The OpenML website</a></li>
+<li><a href="https://openml.github.io/blog/">Miscellaneous reading on OpenML</a></li>
+<li><a href="https://www.openml.org/contact">To get in touch!</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/blog/2020/06/08/OpenML-Machine-Learning-as-a-community.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Open machine learning blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/openml" title="openml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/open_ml" title="open_ml"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
