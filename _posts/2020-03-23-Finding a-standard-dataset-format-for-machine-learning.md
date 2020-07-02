@@ -167,4 +167,4 @@ You are welcome to comment below, or send us an email at openmlhq@googlegroups.c
 
 
 **Contributors to this blog post:**
-Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter Gijsbers, Andreas Mueller, Matthias Feurer, Jan van Rijn, Marcus Weimer, Marcel Wever, Gertjan van den Burg
+Mitar Milutinovic, Prabhant Singh, Joaquin Vanschoren, Pieter Gijsbers, Andreas Mueller, Matthias Feurer, Jan van Rijn, Marcus Weimer, Marcel Wever, Gertjan van den Burg, Nick Poorman
