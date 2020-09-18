@@ -1,4 +1,7 @@
 [//]: # (This template replaces README.md when someone creates a new repo with the fastpages template.)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![](https://github.com/openml/blog/workflows/CI/badge.svg) 
 ![](https://github.com/openml/blog/workflows/GH-Pages%20Status/badge.svg) 
@@ -20,3 +23,22 @@ Publishing new posts works via Git. The usual way to publish a new story is to:
 * Make a pull request to submit a blog post. We will then review and merge it.
 
 For more information on formatting and features, [see the fastpages documentation](https://github.com/fastai/fastpages)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://prabhant.github.io"><img src="https://avatars2.githubusercontent.com/u/13768043?v=4" width="100px;" alt=""/><br /><sub><b>prabhant</b></sub></a><br /><a href="#blog-prabhant" title="Blogposts">📝</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
