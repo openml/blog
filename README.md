@@ -35,7 +35,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://prabhant.github.io"><img src="https://avatars2.githubusercontent.com/u/13768043?v=4" width="100px;" alt=""/><br /><sub><b>prabhant</b></sub></a><br /><a href="#blog-prabhant" title="Blogposts">📝</a></td>
     <td align="center"><a href="https://github.com/Neeratyoy"><img src="https://avatars2.githubusercontent.com/u/3191233?v=4" width="100px;" alt=""/><br /><sub><b>Neeratyoy Mallik</b></sub></a><br /><a href="#blog-Neeratyoy" title="Blogposts">📝</a></td>
-    <td align="center"><a href="https://joaquinvanschoren.github.io/"><img src="https://avatars1.githubusercontent.com/u/1724503?v=4" width="100px;" alt=""/><br /><sub><b>Joaquin Vanschoren</b></sub></a><br /><a href="#blog-joaquinvanschoren" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://joaquinvanschoren.github.io/"><img src="https://avatars1.githubusercontent.com/u/1724503?v=4" width="100px;" alt=""/><br /><sub><b>Joaquin Vanschoren</b></sub></a><br /><a href="#blog-joaquinvanschoren" title="Blogposts">📝</a> <a href="#design-joaquinvanschoren" title="Design">🎨</a></td>
   </tr>
 </table>
 
