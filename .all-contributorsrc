@@ -14,6 +14,24 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "Neeratyoy",
+      "name": "Neeratyoy Mallik",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3191233?v=4",
+      "profile": "https://github.com/Neeratyoy",
+      "contributions": [
+        "blog"
+      ]
+    },
+    {
+      "login": "joaquinvanschoren",
+      "name": "Joaquin Vanschoren",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1724503?v=4",
+      "profile": "https://joaquinvanschoren.github.io/",
+      "contributions": [
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 7,
