@@ -13,14 +13,14 @@ Twice a year the [OpenML](https://www.openml.org/) community organizes an OpenML
 Next week we will kick off our fall workshop, which will be hosted virtually and is open to everyone!
 At the workshop we work on the development and maintenance of the OpenML platform (website, APIs and extensions), 
 but also encourage discussions on a broad range of topics, from using the platform to building the platform to building the community.
-If you are already sure you want to join, please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) and we will see you next week! :)
+If you are already sure you want to join, please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) and we will see you next week!
 
 The workshops are the perfect time to get involved with the OpenML community.
 We welcome first time contributors to the project. You can contribute in many ways, such as giving feedback, cleaning data, or helping with design, planning, or content.
 If you are looking to contribute to the software projects, we are there to help you get started on beginner issues.
 Even better, the workshop coincides with [Hacktoberfest](https://hacktoberfest.digitalocean.com/), 
 which means you can earn a shirt through your open source software contributions!
-To get an even better idea of what happens at an OpenML workshop, read the [write-up of last year's fall workshop](how-to-link-to-blogpost?) 
+To get an even better idea of what happens at an OpenML workshop, read the [write-up of last year's fall workshop](https://openml.github.io/blog/openml/2019/10/24/OpenML-workshop-at-Dagstuhl.html) 
 and look at [the workshop agenda](https://docs.google.com/document/d/1-cjXSqjbce0Gq5zydkp-RNQQmxmcSW4WQ0fWTHUwU9E/edit#).
 
 In this blog post we will go over the basics on how you can participate in the workshop.
@@ -60,18 +60,21 @@ So whenever you are interested in joining people discussing the [new openml webs
 In the [workshop agenda](https://docs.google.com/document/d/1-cjXSqjbce0Gq5zydkp-RNQQmxmcSW4WQ0fWTHUwU9E/edit#) you will find various breakout sessions.
 These cover a wide range of topics, and we will briefly cover a few of them to give you an impression.
 
-The **Dataset Quality** break-out session discusses what quality standards we want to uphold for datasets on OpenML.
+1. The **Dataset Quality** break-out session discusses what quality standards we want to uphold for datasets on OpenML.
 Ideally, we would like all our datasets perfectly annotated with a description of how the data was collected, what each features means, and what the feature types are.
 In reality, datasets are collected from different sources and often uploaded by someone other than the original creator.
-This leads to issues such as incomplete data, or multiple uploads of the same data.
-How can we ensure that despite these practical issues, it remains easy to find datasets of interest on OpenML?
+This leads to issues such as incomplete data, badly annotated columns, or multiple uploads of the same data.How can we ensure that despite these practical issues, it remains easy to find datasets of interest on OpenML?
 How can we improve the dataset quality of datasets uploaded to OpenML?
-And how can we set these new standards and guidelines in a maintainable way?
+How can we set these new standards and guidelines in a maintainable way?
+How can we automate annotation of attribute types to the dataset?
+How can we detect corrupt datasets before uploading it to server?
 
-The **Website Feedback** break-out session is to discuss the newly designed OpenML website.
+2. The **Website Feedback** break-out session is to discuss the newly designed [OpenML website](https://github.com/minio/minio/issues/4364).
+We will appreciate any feedback on frontend, functionalities and limitations of the [new openml website](https://new.openml.org).   
 
-We [recently discussed](link-to-blog) that OpenML wants to improve support for a wider range of datasets.
-For this reason we are moving away from the ARFF format. The **Dataset Format** break-out session discusses this transition .
+3. We [recently discussed](https://openml.github.io/blog/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html) that OpenML wants to improve support for a wider range of datasets.
+For this reason we are moving away from the ARFF format. The **Dataset Format** break-out session discusses this transition. 
+Our current plan is to migrate to parquet format, we will be discussing about limitations and advantages of new format and how can we integrate parquet to OpenML. 
 
 We welcome your participation in any these sessions.  
 And if you have an interesting topic we should discuss, feel free to submit your own breakout proposal!
