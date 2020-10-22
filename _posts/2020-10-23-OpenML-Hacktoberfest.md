@@ -50,7 +50,6 @@ You will automatically be connected to anyone that is within the vicinity of you
 This means you can more organically join groups of people, or walk from one meeting room to the next.
 Here is a preview of our OpenML map:
 ![]({{ site.baseurl }}/images/fastpages_posts/gathertown-openml.png "Hackathon")
-![A map of our workshop venue](../images/fastpages_posts/gathertown-openml.png)
 
 At a glance you see two types of areas: those marked with pink and those that are not marked.
 Areas that are not marked (e.g. the main lobby) function exactly as described above.
@@ -67,8 +66,8 @@ The rules are simple:
  - Find an issue you can help with (more on that below)
  - Submit a pull request resolving the issue
  - To be eligible for the t-shirt and swag, you must open four pull requests (this is the "enough" part)
- 
-![Hacktoberfest Logo](../images/fastpages_posts/hacktoberfest-2020.png)
+
+![]({{ site.baseurl }}/images/fastpages_posts/hacktoberfest-2020.png "Hackathon")
  
 You can browse our repositories and identify issues which you would like to work on.
 To make things easier, here are the list of openml repositories that are extra prepared for Hacktoberfest.
