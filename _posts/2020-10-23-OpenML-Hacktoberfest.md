@@ -5,7 +5,7 @@ description: Join us at the 2020 Fall Workshop on gather.town!
 categories: [OpenML, Hacktoberfest, Workshop]
 comments: true
 title: Participate in the OpenML Hacktoberfest Workshop!
-image: images/fastpages_posts/hackathon.jpg
+image: images/fastpages_posts/hackathon.png
 author: Pieter Gijsbers, Prabhant Singh
 ---
 
