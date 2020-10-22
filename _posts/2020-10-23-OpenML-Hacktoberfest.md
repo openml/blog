@@ -29,7 +29,7 @@ This includes pointers to our code repositories, the platform we will use ([gath
 ## Overview
 
 **Where?** [openml at gather.town](https://gather.town/app/c5wA3zo8WPkg579u/openml)  
-**When?**  26th through 30th of October 2020, 09.00-17.00 CET.
+**When?**  26th through 30th of October 2020, 09.00-17.00 CET.  
 **What?**  Discussions about OpenML, contributing to any OpenML project, or experimenting with OpenML.
 
 Please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) if you plan to join.
