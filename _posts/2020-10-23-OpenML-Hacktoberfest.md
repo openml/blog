@@ -11,14 +11,13 @@ author: Pieter Gijsbers, Prabhant Singh
 
 Twice a year the [OpenML](https://www.openml.org/) community organizes an OpenML workshop.
 Next week we will kick off our fall workshop, which will be hosted virtually and open to everyone!
-At the workshop we work on the development and maintenance of the OpenML platform, 
+At the workshop we work on the development and maintenance of the OpenML platform(Website, APIs and extensions), 
 but also encourage discussions on a broad range of topics, from using the platform to building the platform to building the community.
 If you are already sure you want to join, please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) and we will see you next week! :)
 
 The workshops are the perfect time to get involved with the OpenML community.
-Don't worry if you have not previously participated in an OpenML workshop, or even contributed to any OpenML project.
-You can have a meaningful contribution without writing code, through participation in discussions, giving feedback, and uploading or cleaning data.
-And if you are looking to contribute to the software projects, we are there to help you get started on beginner issues.
+We welcome first time contributors to the project. You con contribute also feedback, design, planning, content and cleaning data.
+If you are looking to contribute to the software projects, we are there to help you get started on beginner issues.
 Even better, the workshop coincides with [Hacktoberfest](https://hacktoberfest.digitalocean.com/), 
 which means you can earn a shirt through your open source software contributions!
 To get an even better idea of what happens at an OpenML workshop, read the [write-up of last year's fall workshop](how-to-link-to-blogpost?) 
@@ -29,9 +28,9 @@ This includes pointers to our code repositories, the platform we will use ([gath
 
 ## Overview
 
-Where? [openml at gather.town](https://gather.town/app/c5wA3zo8WPkg579u/openml)
-When?  26th through 30th of October 2020, 09.00-17.00 CET.
-What?  Discussions about OpenML, contributing to any OpenML project, or experimenting with OpenML.
+**Where?** [openml at gather.town](https://gather.town/app/c5wA3zo8WPkg579u/openml)</ br>
+**When?**  26th through 30th of October 2020, 09.00-17.00 CET.</ br>
+**What?**  Discussions about OpenML, contributing to any OpenML project, or experimenting with OpenML.</ br>
 
 Please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) if you plan to join.
 It is not required to attend the workshop in full.
@@ -50,8 +49,8 @@ Rather than the conventional conference call, in gather.town you control an avat
 You will automatically be connected to anyone that is within the vicinity of your avatar.
 This means you can more organically join groups of people, or walk from one meeting room to the next.
 Here is a preview of our OpenML map:
-
-![A map of our workshop venue](images/posts/gathertown-openml.png)
+<img src="../images/fastpages_posts/gathertown-openml.png">
+![A map of our workshop venue](images/fastpages_posts/gathertown-openml.png)
 
 At a glance you see two types of areas: those marked with pink and those that are not marked.
 Areas that are not marked (e.g. the main lobby) function exactly as described above.
@@ -75,9 +74,9 @@ You can browse our repositories and identify issues which you would like to work
 To make things easier, here are the list of openml repositories that are extra prepared for Hacktoberfest.
 These repositories have core developers registered to attend the workshop, and have marked issues which are suitable for newcomers with the `hacktoberfest` label.
 
- - [openml.org](https://github.com/openml/openml.org) The front-end for the new OpenML!  
- - [OpenML](https://github.com/openml/OpenML) The back-end for OpenML.
- - [openml-python](https://github.com/openml/openml-python) The Python API for interacting with the OpenML server. Please read [this welcome message](https://github.com/openml/openml-python/issues/953) to get started.
+ - [openml.org](https://github.com/openml/openml.org) The front-end for the new OpenML!  (python, React.js, )
+ - [OpenML](https://github.com/openml/OpenML) The back-end for OpenML.(php)
+ - [openml-python](https://github.com/openml/openml-python) The Python API for interacting with the OpenML server. Please read [this welcome message](https://github.com/openml/openml-python/issues/953) to get started.(Python)
  - [docs](https://github.com/openml/docs) Documentation for OpenML.
  
 Please be sure to check the respective repositories contribution guidelines, and don't be afraid to ask questions!
