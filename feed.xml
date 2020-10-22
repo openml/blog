@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://openml.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://openml.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-22T08:25:58-05:00</updated><id>https://openml.github.io/blog/feed.xml</id><title type="html">OpenML Blog</title><subtitle>Open machine learning blog</subtitle><entry><title type="html">Participate in the OpenML Hacktoberfest Workshop!</title><link href="https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest.html" rel="alternate" type="text/html" title="Participate in the OpenML Hacktoberfest Workshop!" /><published>2020-10-23T00:00:00-05:00</published><updated>2020-10-23T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest</id><content type="html" xml:base="https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest.html">&lt;p&gt;Twice a year the &lt;a href=&quot;https://www.openml.org/&quot;&gt;OpenML&lt;/a&gt; community organizes an OpenML workshop.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://openml.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://openml.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-22T08:47:35-05:00</updated><id>https://openml.github.io/blog/feed.xml</id><title type="html">OpenML Blog</title><subtitle>Open machine learning blog</subtitle><entry><title type="html">Participate in the OpenML Hacktoberfest Workshop!</title><link href="https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest.html" rel="alternate" type="text/html" title="Participate in the OpenML Hacktoberfest Workshop!" /><published>2020-10-23T00:00:00-05:00</published><updated>2020-10-23T00:00:00-05:00</updated><id>https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest</id><content type="html" xml:base="https://openml.github.io/blog/openml/hacktoberfest/workshop/2020/10/23/OpenML-Hacktoberfest.html">&lt;p&gt;Twice a year the &lt;a href=&quot;https://www.openml.org/&quot;&gt;OpenML&lt;/a&gt; community organizes an OpenML workshop.
 Next week we will kick off our fall workshop, which will be hosted virtually and open to everyone!
 At the workshop we work on the development and maintenance of the OpenML platform(Website, APIs and extensions), 
 but also encourage discussions on a broad range of topics, from using the platform to building the platform to building the community.
@@ -37,8 +37,7 @@ Rather than the conventional conference call, in gather.town you control an avat
 You will automatically be connected to anyone that is within the vicinity of your avatar.
 This means you can more organically join groups of people, or walk from one meeting room to the next.
 Here is a preview of our OpenML map:
-&lt;img src=&quot;/blog/images/fastpages_posts/gathertown-openml.png&quot; alt=&quot;&quot; title=&quot;Hackathon&quot; /&gt;
-&lt;img src=&quot;../images/fastpages_posts/gathertown-openml.png&quot; alt=&quot;A map of our workshop venue&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/blog/images/fastpages_posts/gathertown-openml.png&quot; alt=&quot;&quot; title=&quot;Hackathon&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At a glance you see two types of areas: those marked with pink and those that are not marked.
 Areas that are not marked (e.g. the main lobby) function exactly as described above.
@@ -58,7 +57,7 @@ The rules are simple:&lt;/p&gt;
   &lt;li&gt;To be eligible for the t-shirt and swag, you must open four pull requests (this is the “enough” part)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/fastpages_posts/hacktoberfest-2020.png&quot; alt=&quot;Hacktoberfest Logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/fastpages_posts/hacktoberfest-2020.png&quot; alt=&quot;&quot; title=&quot;Hackathon&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can browse our repositories and identify issues which you would like to work on.
 To make things easier, here are the list of openml repositories that are extra prepared for Hacktoberfest.
