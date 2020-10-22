@@ -2,9 +2,10 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Basic components of OpenML | OpenML Blog</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Basic components of OpenML" />
 <meta name="author" content="Jan van Rijn" />
 <meta property="og:locale" content="en_US" />
@@ -16,27 +17,10 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-03-03T00:00:00-06:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jan van Rijn"},"description":"Understanding the building blocks of OpenML","@type":"BlogPosting","headline":"Basic components of OpenML","url":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html","datePublished":"2017-03-03T00:00:00-06:00","dateModified":"2017-03-03T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html"},"@context":"https://schema.org"}</script>
+{"url":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html","headline":"Basic components of OpenML","dateModified":"2017-03-03T00:00:00-06:00","datePublished":"2017-03-03T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html"},"author":{"@type":"Person","name":"Jan van Rijn"},"description":"Understanding the building blocks of OpenML","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Basic components of OpenML | OpenML Blog</title>
-<meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Basic components of OpenML" />
-<meta name="author" content="Jan van Rijn" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Understanding the building blocks of OpenML" />
-<meta property="og:description" content="Understanding the building blocks of OpenML" />
-<link rel="canonical" href="https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html" />
-<meta property="og:url" content="https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html" />
-<meta property="og:site_name" content="OpenML Blog" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-03-03T00:00:00-06:00" />
-<script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jan van Rijn"},"description":"Understanding the building blocks of OpenML","@type":"BlogPosting","headline":"Basic components of OpenML","url":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html","datePublished":"2017-03-03T00:00:00-06:00","dateModified":"2017-03-03T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://openml.github.io/blog/openml/2017/03/03/Basic-components-of-OpenML.html"},"@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" />
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://openml.github.io/blog/feed.xml" title="OpenML Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
 function wrap_img(fn) {
@@ -67,7 +51,8 @@ window.onload = wrap_img;
     elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
     });
 </script>
-</head><body><header class="site-header">
+</head>
+<body><header class="site-header">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/blog/">OpenML Blog</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
