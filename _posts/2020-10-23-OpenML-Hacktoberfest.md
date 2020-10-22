@@ -49,6 +49,7 @@ Rather than the conventional conference call, in gather.town you control an avat
 You will automatically be connected to anyone that is within the vicinity of your avatar.
 This means you can more organically join groups of people, or walk from one meeting room to the next.
 Here is a preview of our OpenML map:
+![]({{ site.baseurl }}/images/fastpages_posts/gathertown-openml.png "Hackathon")
 ![A map of our workshop venue](../images/fastpages_posts/gathertown-openml.png)
 
 At a glance you see two types of areas: those marked with pink and those that are not marked.
