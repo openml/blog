@@ -49,8 +49,7 @@ Rather than the conventional conference call, in gather.town you control an avat
 You will automatically be connected to anyone that is within the vicinity of your avatar.
 This means you can more organically join groups of people, or walk from one meeting room to the next.
 Here is a preview of our OpenML map:
-<img src="../images/fastpages_posts/gathertown-openml.png">
-![A map of our workshop venue](images/fastpages_posts/gathertown-openml.png)
+![A map of our workshop venue](../images/fastpages_posts/gathertown-openml.png)
 
 At a glance you see two types of areas: those marked with pink and those that are not marked.
 Areas that are not marked (e.g. the main lobby) function exactly as described above.
@@ -68,7 +67,7 @@ The rules are simple:
  - Submit a pull request resolving the issue
  - To be eligible for the t-shirt and swag, you must open four pull requests (this is the "enough" part)
  
-![Hacktoberfest Logo](images/hacktoberfest-2020.png)
+![Hacktoberfest Logo](../images/fastpages_posts/hacktoberfest-2020.png)
  
 You can browse our repositories and identify issues which you would like to work on.
 To make things easier, here are the list of openml repositories that are extra prepared for Hacktoberfest.
