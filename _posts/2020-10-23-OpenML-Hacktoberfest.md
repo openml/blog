@@ -28,14 +28,14 @@ This includes pointers to our code repositories, the platform we will use ([gath
 
 ## Overview
 
-**Where?** [openml at gather.town](https://gather.town/app/c5wA3zo8WPkg579u/openml)</ br>
-**When?**  26th through 30th of October 2020, 09.00-17.00 CET.</ br>
-**What?**  Discussions about OpenML, contributing to any OpenML project, or experimenting with OpenML.</ br>
+**Where?** [openml at gather.town](https://gather.town/app/c5wA3zo8WPkg579u/openml)  
+**When?**  26th through 30th of October 2020, 09.00-17.00 CET.
+**What?**  Discussions about OpenML, contributing to any OpenML project, or experimenting with OpenML.
 
 Please [register](https://docs.google.com/forms/d/e/1FAIpQLSedDOBZzuQP9dACFWiPqXcl1HvURB9h3SOdwPq45PB-87TPyg/viewform) if you plan to join.
-It is not required to attend the workshop in full.
-You are free to join only for a day or specific discussions.
-However, it is helpful to indicate which meetings you want to attend, so we know who to expect.
+It is not required to attend the workshop in full.  
+You are free to join only for a day or specific discussions.  
+However, it is helpful to indicate which meetings you want to attend, so we know who to expect.  
 
 The [workshop agenda](https://docs.google.com/document/d/1-cjXSqjbce0Gq5zydkp-RNQQmxmcSW4WQ0fWTHUwU9E/edit#) is public.
 If you see a meeting which you would like to join, just add your name to the list.
