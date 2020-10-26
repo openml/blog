@@ -106,5 +106,5 @@ We were all new to open source once and are happy to help you get started too.
 If you are just getting your feet wet with open source contribution, a great way to get started it to just try and use the packages/website.
 If you see documentation which needs clarification, or perhaps even just a simple typo, we appreciate your help in fixing it!
 
-## We hope to see you are our workshop!
+## We hope to see you at our workshop!
 If you have any questions about the workshop, feel free to leave a comment.
