@@ -4,6 +4,7 @@ services:
     working_dir: /data
     environment:
         - INPUT_BOOL_SAVE_MARKDOWN=false
+        - ACTIONS_ALLOW_UNSECURE_COMMANDS='true'
     build:
       context: ./_action_files
       dockerfile: ./Dockerfile
