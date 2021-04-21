@@ -18,7 +18,6 @@ jobs:
       env:
         PAYLOAD: ${{ toJSON(github.event) }}
         PR_PAYLOAD: ${{ github.event.pull_request }}
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Comment on issue if sufficient access does not exist
       if: |
@@ -47,7 +46,6 @@ jobs:
           throw msg;
       env:
         permission_level: ${{ github.event.issue.author_association }}
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
           
   upgrade:
     needs: [check_credentials]
@@ -82,7 +80,6 @@ jobs:
         from pathlib import Path
         new_version = Path('new_files/_fastpages_docs/version.txt')
         old_version = Path('current_files/_fastpages_docs/version.txt')
-
         if old_version.exists():
           old_num = old_version.read_text().strip()
           new_num = new_version.read_text().strip()
@@ -116,12 +113,10 @@ jobs:
             cp -r $file ../current_files;
           fi
         done
-
         # copy custom-variables.scss if doesn't exist
         if [ ! -f "../current_files/_sass/minima/custom-variables.scss" ]; then
           cp _sass/minima/custom-variables.scss ../current_files/_sass/minima/
         fi
-
         # copy select files in assets and _sass
         cp -r assets/js ../current_files/assets
         cp -r assets/badges ../current_files/assets
@@ -133,7 +128,6 @@ jobs:
         
         # install dependencies
         pip3 install pyyaml
-
     - name: sync baseurl
       if: steps.check_version.outputs.vbump == 'true'
       run: |
@@ -172,7 +166,7 @@ jobs:
         upgrade_pr_path.write_text(upgrade_pr)
       shell: python
 
-    - uses: webfactory/ssh-agent@v0.2.0
+    - uses: webfactory/ssh-agent@v0.4.1
       if: steps.check_version.outputs.vbump == 'true'
       with:
           ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY }}
@@ -194,7 +188,6 @@ jobs:
         git push -f --set-upstream origin fastpages-automated-upgrade master
       env: 
         GH_USERNAME: ${{ github.event.issue.user.login }}
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Open a PR
       if: steps.check_version.outputs.vbump == 'true'
@@ -232,7 +225,6 @@ jobs:
       env:
         PR_NUM: ${{ steps.pr.outputs.pr_num }}
         REPO: ${{ github.repository }}
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Comment on issue 
       if: steps.check_version.outputs.vbump == 'true'    
