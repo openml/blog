@@ -18,6 +18,7 @@ jobs:
       env:
         PAYLOAD: ${{ toJSON(github.event) }}
         PR_PAYLOAD: ${{ github.event.pull_request }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Comment on issue if sufficient access does not exist
       if: |
@@ -46,6 +47,7 @@ jobs:
           throw msg;
       env:
         permission_level: ${{ github.event.issue.author_association }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
           
   upgrade:
     needs: [check_credentials]
@@ -192,6 +194,7 @@ jobs:
         git push -f --set-upstream origin fastpages-automated-upgrade master
       env: 
         GH_USERNAME: ${{ github.event.issue.user.login }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Open a PR
       if: steps.check_version.outputs.vbump == 'true'
@@ -229,6 +232,7 @@ jobs:
       env:
         PR_NUM: ${{ steps.pr.outputs.pr_num }}
         REPO: ${{ github.repository }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Comment on issue 
       if: steps.check_version.outputs.vbump == 'true'    
