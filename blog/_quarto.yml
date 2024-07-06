@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "OpenML Blog"
+  description: "Open machine learning blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/openml/blog
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

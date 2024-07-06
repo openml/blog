@@ -1,0 +1,16 @@
+---
+title: "About"
+image: openml-logo.png
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/openml/blog
+
+---
+
+# Welcome to the Open Machine Learning blog
+This blog brings you stories about OpenML: why we want to streamline machine learning research, how you can use it, and what we are doing. 
+We are also open to [your stories](https://github.com/openml/blog#how-to-contribute) about anything related to open machine learning research, education, and applications. 
+Join the conversation :).

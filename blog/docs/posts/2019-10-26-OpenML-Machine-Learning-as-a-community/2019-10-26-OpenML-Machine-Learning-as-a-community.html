@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Neeratyoy Mallik">
+<meta name="dcterms.date" content="2019-10-26">
+<meta name="description" content="A description of how OpenML fits into traditional ML practices">
+
+<title>OpenML - Machine Learning as a community – OpenML Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">OpenML Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/openml/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">OpenML - Machine Learning as a community</h1>
+                  <div>
+        <div class="description">
+          A description of how OpenML fits into traditional ML practices
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">OpenML</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Neeratyoy Mallik </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 26, 2019</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#openml-components" id="toc-openml-components" class="nav-link active" data-scroll-target="#openml-components">OpenML Components</a></li>
+  <li><a href="#using-openml" id="toc-using-openml" class="nav-link" data-scroll-target="#using-openml">Using OpenML</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><a href="https://www.openml.org/">OpenML</a> is an online Machine Learning (ML) experiments database accessible to everyone for free. The core idea is to have a single repository of datasets and results of ML experiments on them. Despite having gained a lot of popularity in recent years, with a plethora of tools now available, the numerous ML experimentations continue to happen in silos and not necessarily as one whole shared community. In this post, we shall try to get a brief glimpse of what OpenML offers and how it can fit our current Machine Learning practices.</p>
+<p>Let us jump straight at getting our hands dirty by building a simple machine learning model. If it is simplicity we are looking for, it has to be the Iris dataset that we shall work with. In the example script below, we are going to load the Iris dataset available with scikit-learn, use 10-fold cross-validation to evaluate a Random Forest of 10 trees. Sounds trivial enough and is indeed less than 10 lines of code.</p>
+<div id="cell-2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> datasets</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.svm <span class="im">import</span> SVC</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loading Iris dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> datasets.load_iris(return_X_y<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.shape, y.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(150, 4) (150,)</code></pre>
+</div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initializing a Random Forest with </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># arbitrary hyperparameters</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># max_depth kept as 2 since Iris has</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># only 4 features</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> cross_val_score(clf, X, y, cv<span class="op">=</span><span class="dv">5</span>, scoring<span class="op">=</span><span class="st">'accuracy'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean score : </span><span class="sc">{:.5f}</span><span class="st">"</span>.<span class="bu">format</span>(scores.mean()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean score : 0.94000</code></pre>
+</div>
+</div>
+<p>A simple script and we achieve a mean accuracy of <strong>95.33%</strong>. That was easy. It is really amazing how far we have come with ML tools that make it easy to get started. As a result, we have hundreds of thousands of people working with these tools every day. That inevitably leads to the reinvention of the wheel. The tasks that each individual ML practitioner performs often have significant overlaps and can be omitted by reusing what someone from the community has done already. At the end of the day, we didn’t build a Random Forest model all the way from scratch. We gladly reused code written by generous folks from the community. The special attribute of our species is the ability to work as a collective wherein our combined intellect becomes larger than the individual sum of parts. Why not do the same for ML? I mean, can I see what other ML practitioners have done to get better scores on the Iris dataset?</p>
+<p>Answering this is one of the targets of this post. We shall subsequently explore if this can be done, with the help of <a href="https://www.openml.org/">OpenML</a>. However, first, we shall briefly familiarize ourselves with few terminologies and see how we can split the earlier example we saw into modular components.</p>
+<section id="openml-components" class="level3">
+<h3 class="anchored" data-anchor-id="openml-components">OpenML Components</h3>
+<p><img src="openml.png" class="img-fluid"></p>
+<p>Image source: <a href="https://medium.com/open-machine-learning/openml-1e0d43f0ae13">https://medium.com/open-machine-learning/openml-1e0d43f0ae13</a></p>
+<p><strong>Dataset</strong>: OpenML houses over 2k+ active datasets for various regression, classification, clustering, survival analysis, stream processing tasks and more. Any user can upload a dataset. Once uploaded, the server computes certain meta-features on the dataset - <em>Number of classes</em>, <em>Number of missing values</em>, <em>Number of features</em>, etc. With respect to our earlier example, the following line is the equivalent of fetching a dataset from OpenML.</p>
+<div id="cell-11" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> datasets.load_iris(return_X_y<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Task</strong>: A task is linked to a specific dataset, defining what the target/dependent variable is. Also specifies evaluation measures such as - accuracy, precision, area under curve, etc. or the kind of estimation procedure to be used such as - 10-fold <em>cross-validation</em>, n% holdout set, etc. With respect to our earlier example, the <em>parameters</em> to the following function call capture the idea of a task.</p>
+<div id="cell-13" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> cross_val_score(clf, X, y, cv<span class="op">=</span><span class="dv">5</span>, scoring<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Flow</strong>: Describes the kind of modelling to be performed. It could be a flow or a series of steps, i.e., a scikit-learn pipeline. For now, we have used a simple Random Forest model which is the <em>flow</em> component here.</p>
+<div id="cell-15" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Run</strong>: Pairs a <em>flow</em> and task together which results in a <em>run</em>. The <em>run</em> has the predictions which are turned into <em>evaluations</em> by the server. This is effectively captured by the <em>execution</em> of the line:</p>
+<div id="cell-17" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> cross_val_score(clf, X, y, cv<span class="op">=</span><span class="dv">5</span>, scoring<span class="op">=</span><span class="st">'accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, this may appear a little obfuscating given that we are trying to compartmentalize a simple 10-line code which works just fine. However, if we take a few seconds to go through the 4 components explained above, we can see that it makes our <em>training of a Random Forest</em> on Iris a series of modular tasks. Modules are such a fundamental concept in Computer Science. They are like Lego blocks. Once we have modules, it means we can plug and play at ease. The code snippet below attempts to rewrite the earlier example using the ideas of the OpenML components described, to give a glimpse of what we can potentially gain during experimentations.</p>
+<div id="cell-19" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> datasets</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.svm <span class="im">import</span> SVC</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="dataset-component" class="level4">
+<h4 class="anchored" data-anchor-id="dataset-component">DATASET component</h4>
+<div id="cell-21" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To load IRIS dataset as a dataset module/component</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dataset():</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    X, y <span class="op">=</span> datasets.load_iris(return_X_y<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X, y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="task-component" class="level4">
+<h4 class="anchored" data-anchor-id="task-component">TASK component</h4>
+<div id="cell-23" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tasks here define the number of cross-validation folds</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and the scoring metric to be used for evaluation</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> task_1(f):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    X, y <span class="op">=</span> dataset()  <span class="co"># loads IRIS</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cross_val_score(f, X, y, cv<span class="op">=</span><span class="dv">5</span>, </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                           scoring<span class="op">=</span><span class="st">'accuracy'</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> task_2(f):</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    X, y <span class="op">=</span> dataset()  <span class="co"># loads IRIS</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cross_val_score(f, X, y, cv<span class="op">=</span><span class="dv">15</span>, </span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                           scoring<span class="op">=</span><span class="st">'balanced_accuracy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="flow-component" class="level4">
+<h4 class="anchored" data-anchor-id="flow-component">FLOW component</h4>
+<div id="cell-25" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Flows determine the modelling technique to be applied</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Helps define a model irrespective of dataset or tasks</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> flow_1():</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    clf <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> clf</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> flow_2():</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    clf <span class="op">=</span> SVC(gamma<span class="op">=</span><span class="st">'auto'</span>, kernel<span class="op">=</span><span class="st">'linear'</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> clf </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="run-component" class="level4">
+<h4 class="anchored" data-anchor-id="run-component">RUN component</h4>
+<div id="cell-27" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Runs essentially evaluates a task-flow pairing </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and therefore in effect executs the modelling </span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of a dataset as per the task task definition</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run(task, flow):</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> task(flow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Results for Random Forest</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>rf_task_1 <span class="op">=</span> run(task_1, flow_1())</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>rf_task_2 <span class="op">=</span> run(task_2, flow_1())</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"RF using task 1: </span><span class="sc">{:&lt;.5}</span><span class="st">; task 2: </span><span class="sc">{:&lt;.5}</span><span class="st">"</span>.<span class="bu">format</span>(rf_task_1.mean(), rf_task_2.mean()))</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Results for SVM</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>svm_task_1 <span class="op">=</span> run(task_1, flow_2())</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>svm_task_2 <span class="op">=</span> run(task_2, flow_2())</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"SVM using task 1: </span><span class="sc">{:&lt;.5}</span><span class="st">; task 2: </span><span class="sc">{:&lt;.5}</span><span class="st">"</span>.<span class="bu">format</span>(svm_task_1.mean(), svm_task_2.mean()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>RF using task 1: 0.95333; task 2: 0.94444
+SVM using task 1: 0.98; task 2: 0.97222</code></pre>
+</div>
+</div>
+<p>We can, therefore, compose various different tasks, flows, which are independent operations. Runs can then pair any such task and flow to construct an ML <em>workflow</em> and return the evaluated scores. This approach can help us define such components one-time, and we can extend this for any combination of a dataset, model, and for any number of evaluations in the future. Imagine if the entire ML <em>community</em> defines such tasks and various simple to complicated flows that they use in their daily practice. We can build custom working ML pipeline and even get to compare performances of our techniques on the same <em>task</em> with others! OpenML aims exactly for that. In the next section of this post, we shall scratch the surface of OpenML to see if we can actually do with OpenML what it promises.</p>
+</section>
+</section>
+<section id="using-openml" class="level3">
+<h3 class="anchored" data-anchor-id="using-openml">Using OpenML</h3>
+<p>OpenML-Python can be installed using <em>pip</em> or by <a href="https://openml.github.io/openml-python/develop/contributing.html#installation">cloning the git repo</a> and installing the current development version. So shall we then install OpenML?&nbsp;;) It will be beneficial if the code snippets are tried out as this post is read. A consolidated Jupyter notebook with all the code can be found <a href="https://nbviewer.jupyter.org/github/Neeratyoy/openml-python/blob/blog/OpenML%20-%20Machine%20Learning%20as%20a%20community.ipynb">here</a>.</p>
+<p>Now that we have OpenML, let us jump straight into figuring out how we can get the Iris dataset from there. We can always browse the<a href="https://www.openml.org/">OpenML website</a> and search for Iris. That is the easy route. Let us get familiar with the programmatic approach and learn how to fish instead. The OpenML-Python API can be found <a href="https://openml.github.io/openml-python/develop/api.html">here</a>.</p>
+<section id="retrieving-iris-from-openml" class="level4">
+<h4 class="anchored" data-anchor-id="retrieving-iris-from-openml">Retrieving Iris from&nbsp;OpenML</h4>
+<p>In the example below, we will list out all possible datasets available in OpenML. We can choose the output format. I’ll go with <em>dataframe</em> so that we obtain a pandas DataFrame and can get a neat tabular representation to search and sort specific entries.</p>
+<div id="cell-34" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openml</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-35" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching the list of all available datasets on OpenML</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> openml.datasets.list_datasets(output_format<span class="op">=</span><span class="st">'dataframe'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d.shape)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Listing column names or attributes that OpenML offers</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> d.columns:</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(3073, 16)
+did
+name
+version
+uploader
+status
+format
+MajorityClassSize
+MaxNominalAttDistinctValues
+MinorityClassSize
+NumberOfClasses
+NumberOfFeatures
+NumberOfInstances
+NumberOfInstancesWithMissingValues
+NumberOfMissingValues
+NumberOfNumericFeatures
+NumberOfSymbolicFeatures</code></pre>
+</div>
+</div>
+<div id="cell-36" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   did        name  version uploader  status format  MajorityClassSize  \
+2    2      anneal        1        1  active   ARFF              684.0   
+3    3    kr-vs-kp        1        1  active   ARFF             1669.0   
+4    4       labor        1        1  active   ARFF               37.0   
+5    5  arrhythmia        1        1  active   ARFF              245.0   
+6    6      letter        1        1  active   ARFF              813.0   
+
+   MaxNominalAttDistinctValues  MinorityClassSize  NumberOfClasses  \
+2                          7.0                8.0              5.0   
+3                          3.0             1527.0              2.0   
+4                          3.0               20.0              2.0   
+5                         13.0                2.0             13.0   
+6                         26.0              734.0             26.0   
+
+   NumberOfFeatures  NumberOfInstances  NumberOfInstancesWithMissingValues  \
+2              39.0              898.0                               898.0   
+3              37.0             3196.0                                 0.0   
+4              17.0               57.0                                56.0   
+5             280.0              452.0                               384.0   
+6              17.0            20000.0                                 0.0   
+
+   NumberOfMissingValues  NumberOfNumericFeatures  NumberOfSymbolicFeatures  
+2                22175.0                      6.0                      33.0  
+3                    0.0                      0.0                      37.0  
+4                  326.0                      8.0                       9.0  
+5                  408.0                    206.0                      74.0  
+6                    0.0                     16.0                       1.0  </code></pre>
+</div>
+</div>
+<p>The column names indicate that they contain the meta-information about each of the datasets, and at this instance, we have access to <strong>2958</strong> datasets as indicated by the shape of the dataframe. We shall try searching for ‘iris’ in the column <em>name</em> and also use the <em>version</em> column to sort the results.</p>
+<div id="cell-38" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering dataset list to have 'iris' in the 'name' column</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># then sorting the list based on the 'version'</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>d[d[<span class="st">'name'</span>].<span class="bu">str</span>.contains(<span class="st">'iris'</span>)].sort_values(by<span class="op">=</span><span class="st">'version'</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">did</th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">version</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">status</th>
+<th data-quarto-table-cell-role="th">format</th>
+<th data-quarto-table-cell-role="th">MajorityClassSize</th>
+<th data-quarto-table-cell-role="th">MaxNominalAttDistinctValues</th>
+<th data-quarto-table-cell-role="th">MinorityClassSize</th>
+<th data-quarto-table-cell-role="th">NumberOfClasses</th>
+<th data-quarto-table-cell-role="th">NumberOfFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfInstances</th>
+<th data-quarto-table-cell-role="th">NumberOfInstancesWithMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfNumericFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfSymbolicFeatures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">61</td>
+<td>61</td>
+<td>iris</td>
+<td>1</td>
+<td>1</td>
+<td>active</td>
+<td>ARFF</td>
+<td>50.0</td>
+<td>3.0</td>
+<td>50.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>150.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">41950</td>
+<td>41950</td>
+<td>iris_test_upload</td>
+<td>1</td>
+<td>4030</td>
+<td>active</td>
+<td>ARFF</td>
+<td>50.0</td>
+<td>3.0</td>
+<td>50.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>150.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">42261</td>
+<td>42261</td>
+<td>iris-example</td>
+<td>1</td>
+<td>348</td>
+<td>active</td>
+<td>ARFF</td>
+<td>50.0</td>
+<td>NaN</td>
+<td>50.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>150.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">451</td>
+<td>451</td>
+<td>irish</td>
+<td>1</td>
+<td>2</td>
+<td>active</td>
+<td>ARFF</td>
+<td>278.0</td>
+<td>10.0</td>
+<td>222.0</td>
+<td>2.0</td>
+<td>6.0</td>
+<td>500.0</td>
+<td>32.0</td>
+<td>32.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">969</td>
+<td>969</td>
+<td>iris</td>
+<td>3</td>
+<td>2</td>
+<td>active</td>
+<td>ARFF</td>
+<td>100.0</td>
+<td>2.0</td>
+<td>50.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>150.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Okay, so the iris dataset with the version as 1 has an ID of <strong>61</strong>. For verification, we can check the <a href="https://www.openml.org/d/61">website for dataset ID 61</a>. We can see that it is the original Iris dataset which is of interest to us - 3 classes of 50 instances, with 4 numeric features. However, we shall retrieve the same information, as promised, programmatically.</p>
+<div id="cell-40" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> openml.datasets.get_dataset(<span class="dv">61</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>iris</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>OpenML Dataset
+==============
+Name..........: iris
+Version.......: 1
+Format........: ARFF
+Upload Date...: 2014-04-06 23:23:39
+Licence.......: Public
+Download URL..: https://www.openml.org/data/v1/download/61/iris.arff
+OpenML URL....: https://www.openml.org/d/61
+# of features.: 5
+# of instances: 150</code></pre>
+</div>
+</div>
+<div id="cell-41" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>iris.features</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>{0: [0 - sepallength (numeric)],
+ 1: [1 - sepalwidth (numeric)],
+ 2: [2 - petallength (numeric)],
+ 3: [3 - petalwidth (numeric)],
+ 4: [4 - class (nominal)]}</code></pre>
+</div>
+</div>
+<div id="cell-42" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iris.description)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>**Author**: R.A. Fisher  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Iris) - 1936 - Donated by Michael Marshall  
+**Please cite**:   
+
+**Iris Plants Database**  
+This is perhaps the best known database to be found in the pattern recognition literature.  Fisher's paper is a classic in the field and is referenced frequently to this day.  (See Duda &amp; Hart, for example.)  The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.  One class is     linearly separable from the other 2; the latter are NOT linearly separable from each other.
+
+Predicted attribute: class of iris plant.  
+This is an exceedingly simple domain.  
+ 
+### Attribute Information:
+    1. sepal length in cm
+    2. sepal width in cm
+    3. petal length in cm
+    4. petal width in cm
+    5. class: 
+       -- Iris Setosa
+       -- Iris Versicolour
+       -- Iris Virginica</code></pre>
+</div>
+</div>
+<p>With the appropriate dataset available, let us briefly go back to the terminologies we discussed earlier. We have only used the <em>dataset</em> component so far. The <em>dataset</em> component is closely tied with the task component. To reiterate, the task would describe <em>how</em> the dataset will be used.</p>
+</section>
+<section id="retrieving-relevant-tasks-from-openml" class="level4">
+<h4 class="anchored" data-anchor-id="retrieving-relevant-tasks-from-openml">Retrieving relevant tasks from&nbsp;OpenML</h4>
+<p>We shall firstly list all available tasks that work with the Iris dataset. However, we are only treating Iris as a supervised classification problem and hence will filter accordingly. Following which, we will collect only the task IDs of the tasks relevant to us.</p>
+<div id="cell-46" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> openml.tasks.list_tasks(data_id<span class="op">=</span><span class="dv">61</span>, output_format<span class="op">=</span><span class="st">'dataframe'</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">tid</th>
+<th data-quarto-table-cell-role="th">ttid</th>
+<th data-quarto-table-cell-role="th">did</th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">task_type</th>
+<th data-quarto-table-cell-role="th">status</th>
+<th data-quarto-table-cell-role="th">estimation_procedure</th>
+<th data-quarto-table-cell-role="th">evaluation_measures</th>
+<th data-quarto-table-cell-role="th">source_data</th>
+<th data-quarto-table-cell-role="th">target_feature</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">NumberOfFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfInstances</th>
+<th data-quarto-table-cell-role="th">NumberOfInstancesWithMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfNumericFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfSymbolicFeatures</th>
+<th data-quarto-table-cell-role="th">number_samples</th>
+<th data-quarto-table-cell-role="th">cost_matrix</th>
+<th data-quarto-table-cell-role="th">quality_measure</th>
+<th data-quarto-table-cell-role="th">target_value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">59</td>
+<td>59</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>10-fold Crossvalidation</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">118</td>
+<td>118</td>
+<td>3</td>
+<td>61</td>
+<td>iris</td>
+<td>Learning Curve</td>
+<td>active</td>
+<td>10 times 10-fold Learning Curve</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">289</td>
+<td>289</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>33% Holdout set</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1758</td>
+<td>1758</td>
+<td>3</td>
+<td>61</td>
+<td>iris</td>
+<td>Learning Curve</td>
+<td>active</td>
+<td>10-fold Learning Curve</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1823</td>
+<td>1823</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>5 times 2-fold Crossvalidation</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+</div>
+<div id="cell-47" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering only the Supervised Classification tasks on Iris</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>df.query(<span class="st">"task_type=='Supervised Classification'"</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">tid</th>
+<th data-quarto-table-cell-role="th">ttid</th>
+<th data-quarto-table-cell-role="th">did</th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">task_type</th>
+<th data-quarto-table-cell-role="th">status</th>
+<th data-quarto-table-cell-role="th">estimation_procedure</th>
+<th data-quarto-table-cell-role="th">evaluation_measures</th>
+<th data-quarto-table-cell-role="th">source_data</th>
+<th data-quarto-table-cell-role="th">target_feature</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">NumberOfFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfInstances</th>
+<th data-quarto-table-cell-role="th">NumberOfInstancesWithMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfMissingValues</th>
+<th data-quarto-table-cell-role="th">NumberOfNumericFeatures</th>
+<th data-quarto-table-cell-role="th">NumberOfSymbolicFeatures</th>
+<th data-quarto-table-cell-role="th">number_samples</th>
+<th data-quarto-table-cell-role="th">cost_matrix</th>
+<th data-quarto-table-cell-role="th">quality_measure</th>
+<th data-quarto-table-cell-role="th">target_value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">59</td>
+<td>59</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>10-fold Crossvalidation</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">289</td>
+<td>289</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>33% Holdout set</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1823</td>
+<td>1823</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>5 times 2-fold Crossvalidation</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1939</td>
+<td>1939</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>10 times 10-fold Crossvalidation</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1992</td>
+<td>1992</td>
+<td>1</td>
+<td>61</td>
+<td>iris</td>
+<td>Supervised Classification</td>
+<td>active</td>
+<td>Leave one out</td>
+<td>predictive_accuracy</td>
+<td>61</td>
+<td>class</td>
+<td>...</td>
+<td>5</td>
+<td>150</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+</div>
+<div id="cell-48" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Collecting all relevant task_ids</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>tasks <span class="op">=</span> df.query(<span class="st">"task_type=='Supervised Classification'"</span>)[<span class="st">'tid'</span>].to_numpy()</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(tasks))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>13</code></pre>
+</div>
+</div>
+<p>That settles the <em>task</em> component too. Notice how for one <em>dataset</em> (61), we obtain 11 task IDs which are of interest to us. This should illustrate the <em>one-to-many</em> relationship that <em>dataset-task components</em> can have. We have 2 more components to explore - <em>flows</em>, <em>runs</em>. We could list out all possible flows and filter out the ones we want, i.e., Random Forest. However, let us instead fetch all the evaluations made on the Iris dataset using the 11 tasks we collected above.</p>
+<p>We shall subsequently work with the scikit-learn based task which has been uploaded/used the most. We shall then further filter out the list of evaluations from the selected task (task_id=59 in this case), depending on if Random Forest was used.</p>
+<div id="cell-50" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Listing all evaluations made on the 11 tasks collected above</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># with evaluation metric as 'predictive_accuracy'</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>task_df <span class="op">=</span> openml.evaluations.list_evaluations(function<span class="op">=</span><span class="st">'predictive_accuracy'</span>, task<span class="op">=</span>tasks, output_format<span class="op">=</span><span class="st">'dataframe'</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>task_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">run_id</th>
+<th data-quarto-table-cell-role="th">task_id</th>
+<th data-quarto-table-cell-role="th">setup_id</th>
+<th data-quarto-table-cell-role="th">flow_id</th>
+<th data-quarto-table-cell-role="th">flow_name</th>
+<th data-quarto-table-cell-role="th">data_id</th>
+<th data-quarto-table-cell-role="th">data_name</th>
+<th data-quarto-table-cell-role="th">function</th>
+<th data-quarto-table-cell-role="th">upload_time</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">uploader_name</th>
+<th data-quarto-table-cell-role="th">value</th>
+<th data-quarto-table-cell-role="th">values</th>
+<th data-quarto-table-cell-role="th">array_data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>81</td>
+<td>59</td>
+<td>12</td>
+<td>67</td>
+<td>weka.BayesNet_K2(1)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2014-04-07 00:05:11</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.940000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>161</td>
+<td>59</td>
+<td>13</td>
+<td>70</td>
+<td>weka.SMO_PolyKernel(1)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2014-04-07 00:55:32</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>234</td>
+<td>59</td>
+<td>1</td>
+<td>56</td>
+<td>weka.ZeroR(1)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2014-04-07 01:33:24</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.333333</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>447</td>
+<td>59</td>
+<td>6</td>
+<td>61</td>
+<td>weka.REPTree(1)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2014-04-07 06:26:27</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.926667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>473</td>
+<td>59</td>
+<td>18</td>
+<td>77</td>
+<td>weka.LogitBoost_DecisionStump(1)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2014-04-07 06:39:27</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.946667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-51" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering based on sklearn (scikit-learn)</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>task_df <span class="op">=</span> task_df[task_df[<span class="st">'flow_name'</span>].<span class="bu">str</span>.contains(<span class="st">"sklearn"</span>)]</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>task_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">run_id</th>
+<th data-quarto-table-cell-role="th">task_id</th>
+<th data-quarto-table-cell-role="th">setup_id</th>
+<th data-quarto-table-cell-role="th">flow_id</th>
+<th data-quarto-table-cell-role="th">flow_name</th>
+<th data-quarto-table-cell-role="th">data_id</th>
+<th data-quarto-table-cell-role="th">data_name</th>
+<th data-quarto-table-cell-role="th">function</th>
+<th data-quarto-table-cell-role="th">upload_time</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">uploader_name</th>
+<th data-quarto-table-cell-role="th">value</th>
+<th data-quarto-table-cell-role="th">values</th>
+<th data-quarto-table-cell-role="th">array_data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">144</td>
+<td>1849043</td>
+<td>59</td>
+<td>29015</td>
+<td>5500</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-03-03 17:10:12</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.946667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">145</td>
+<td>1853409</td>
+<td>59</td>
+<td>30950</td>
+<td>5873</td>
+<td>sklearn.pipeline.Pipeline(Imputer=openml.utils...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-03-21 22:08:01</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">146</td>
+<td>6130126</td>
+<td>59</td>
+<td>4163633</td>
+<td>7108</td>
+<td>sklearn.model_selection._search.RandomizedSear...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-08-21 11:07:40</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">147</td>
+<td>6130128</td>
+<td>59</td>
+<td>4163634</td>
+<td>7108</td>
+<td>sklearn.model_selection._search.RandomizedSear...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-08-21 11:08:06</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.946667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">148</td>
+<td>6715383</td>
+<td>59</td>
+<td>4747289</td>
+<td>7117</td>
+<td>sklearn.model_selection._search.RandomizedSear...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-09-01 02:56:44</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-52" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Counting frequency of the different tasks used to</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># solve Iris as a supervised classification using scikit-learn</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>task_df[<span class="st">'task_id'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>59       1985
+10107      25
+289         1
+Name: task_id, dtype: int64</code></pre>
+</div>
+</div>
+<div id="cell-53" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieving the most used task</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> openml.tasks.get_task(<span class="dv">59</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>OpenML Classification Task
+==========================
+Task Type Description: https://www.openml.org/tt/1
+Task ID..............: 59
+Task URL.............: https://www.openml.org/t/59
+Estimation Procedure.: crossvalidation
+Evaluation Measure...: predictive_accuracy
+Target Feature.......: class
+# of Classes.........: 3
+Cost Matrix..........: Available</code></pre>
+</div>
+</div>
+<div id="cell-54" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering for only task_id=59</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>task_df <span class="op">=</span> task_df.query(<span class="st">"task_id==59"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-55" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering based on Random Forest</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>task_rf <span class="op">=</span>  task_df[task_df[<span class="st">'flow_name'</span>].<span class="bu">str</span>.contains(<span class="st">"RandomForest"</span>)]</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>task_rf.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">run_id</th>
+<th data-quarto-table-cell-role="th">task_id</th>
+<th data-quarto-table-cell-role="th">setup_id</th>
+<th data-quarto-table-cell-role="th">flow_id</th>
+<th data-quarto-table-cell-role="th">flow_name</th>
+<th data-quarto-table-cell-role="th">data_id</th>
+<th data-quarto-table-cell-role="th">data_name</th>
+<th data-quarto-table-cell-role="th">function</th>
+<th data-quarto-table-cell-role="th">upload_time</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">uploader_name</th>
+<th data-quarto-table-cell-role="th">value</th>
+<th data-quarto-table-cell-role="th">values</th>
+<th data-quarto-table-cell-role="th">array_data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">144</td>
+<td>1849043</td>
+<td>59</td>
+<td>29015</td>
+<td>5500</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-03-03 17:10:12</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.946667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">145</td>
+<td>1853409</td>
+<td>59</td>
+<td>30950</td>
+<td>5873</td>
+<td>sklearn.pipeline.Pipeline(Imputer=openml.utils...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-03-21 22:08:01</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">146</td>
+<td>6130126</td>
+<td>59</td>
+<td>4163633</td>
+<td>7108</td>
+<td>sklearn.model_selection._search.RandomizedSear...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-08-21 11:07:40</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">147</td>
+<td>6130128</td>
+<td>59</td>
+<td>4163634</td>
+<td>7108</td>
+<td>sklearn.model_selection._search.RandomizedSear...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-08-21 11:08:06</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.946667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">190</td>
+<td>6946499</td>
+<td>59</td>
+<td>4978397</td>
+<td>7109</td>
+<td>sklearn.pipeline.Pipeline(imputation=openmlstu...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-09-02 22:06:32</td>
+<td>1</td>
+<td>janvanrijn@gmail.com</td>
+<td>0.920000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="retrieving-top-performing-models-from-openml" class="level4">
+<h4 class="anchored" data-anchor-id="retrieving-top-performing-models-from-openml">Retrieving top-performing models from&nbsp;OpenML</h4>
+<p>Since we are an ambitious bunch of ML practitioners who settle for nothing but the best, and also since most results will not be considered worth the effort if not matching or beating <em>state-of-the-art</em>, we shall aim for the best scores. We’ll sort the filtered results we obtained based on the score or ‘<em>value</em>’ and then extract the components from that run - <em>task</em> and <em>flow</em>.</p>
+<div id="cell-58" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>task_rf.sort_values(by<span class="op">=</span><span class="st">'value'</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">run_id</th>
+<th data-quarto-table-cell-role="th">task_id</th>
+<th data-quarto-table-cell-role="th">setup_id</th>
+<th data-quarto-table-cell-role="th">flow_id</th>
+<th data-quarto-table-cell-role="th">flow_name</th>
+<th data-quarto-table-cell-role="th">data_id</th>
+<th data-quarto-table-cell-role="th">data_name</th>
+<th data-quarto-table-cell-role="th">function</th>
+<th data-quarto-table-cell-role="th">upload_time</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">uploader_name</th>
+<th data-quarto-table-cell-role="th">value</th>
+<th data-quarto-table-cell-role="th">values</th>
+<th data-quarto-table-cell-role="th">array_data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3549</td>
+<td>523926</td>
+<td>59</td>
+<td>3526</td>
+<td>2629</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier(8)</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2016-02-11 22:05:23</td>
+<td>869</td>
+<td>p.gijsbers@student.tue.nl</td>
+<td>0.966667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4353</td>
+<td>8955370</td>
+<td>59</td>
+<td>6890988</td>
+<td>7257</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2018-04-06 16:32:22</td>
+<td>3964</td>
+<td>clear.tsai@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3587</td>
+<td>1852682</td>
+<td>59</td>
+<td>29263</td>
+<td>5500</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-03-15 22:55:18</td>
+<td>1022</td>
+<td>rso@randalolson.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4375</td>
+<td>8886608</td>
+<td>59</td>
+<td>6835139</td>
+<td>7961</td>
+<td>sklearn.pipeline.Pipeline(Imputer=sklearn.prep...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2018-03-17 16:46:27</td>
+<td>5032</td>
+<td>rashmi.kamath01@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3107</td>
+<td>1843272</td>
+<td>59</td>
+<td>24071</td>
+<td>4830</td>
+<td>sklearn.ensemble.forest.RandomForestClassifier...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2016-12-08 20:10:03</td>
+<td>2</td>
+<td>joaquin.vanschoren@gmail.com</td>
+<td>0.960000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-59" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching the Random Forest flow with the best score</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> openml.flows.get_flow(<span class="dv">2629</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>OpenML Flow
+===========
+Flow ID.........: 2629 (version 8)
+Flow URL........: https://www.openml.org/f/2629
+Flow Name.......: sklearn.ensemble.forest.RandomForestClassifier
+Flow Description: Flow generated by openml_run
+Upload Date.....: 2016-02-11 21:17:08
+Dependencies....: None</code></pre>
+</div>
+</div>
+<div id="cell-60" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching the run with the best score for</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Random Forest on Iris</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> openml.runs.get_run(<span class="dv">523926</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>OpenML Run
+==========
+Uploader Name...: Pieter Gijsbers
+Uploader Profile: https://www.openml.org/u/869
+Metric..........: predictive_accuracy
+Result..........: 0.966667
+Run ID..........: 523926
+Run URL.........: https://www.openml.org/r/523926
+Task ID.........: 59
+Task Type.......: Supervised Classification
+Task URL........: https://www.openml.org/t/59
+Flow ID.........: 2629
+Flow Name.......: sklearn.ensemble.forest.RandomForestClassifier(8)
+Flow URL........: https://www.openml.org/f/2629
+Setup ID........: 3526
+Setup String....: None
+Dataset ID......: 61
+Dataset URL.....: https://www.openml.org/d/61</code></pre>
+</div>
+</div>
+<p>Okay, let’s take a pause and re-assess. From multiple users across the globe, who had uploaded runs to OpenML, for a Random Forest run on the Iris, the best score seen till now is <strong>96.67%</strong>. That is certainly better than the naive model we built at the beginning to achieve <strong>95.33%</strong>. We had used a basic 10-fold cross-validation to evaluate a Random Forest of 10 trees with a max depth of 2. Let us see, what the best run uses and if it differs from our approach.</p>
+<div id="cell-62" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The scoring metric used</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>t.evaluation_measure</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<pre><code>'predictive_accuracy'</code></pre>
+</div>
+</div>
+<div id="cell-63" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The methodology used for estimations</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>t.estimation_procedure</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>{'type': 'crossvalidation',
+ 'parameters': {'number_repeats': '1',
+  'number_folds': '10',
+  'percentage': '',
+  'stratified_sampling': 'true'},
+ 'data_splits_url': 'https://www.openml.org/api_splits/get/59/Task_59_splits.arff'}</code></pre>
+</div>
+</div>
+<div id="cell-64" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The model used</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>f.name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<pre><code>'sklearn.ensemble.forest.RandomForestClassifier'</code></pre>
+</div>
+</div>
+<div id="cell-65" class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The model parameters</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> param <span class="kw">in</span> r.parameter_settings:</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>    name, value <span class="op">=</span> param[<span class="st">'oml:name'</span>], param[<span class="st">'oml:value'</span>]</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">{:&lt;25}</span><span class="st"> : </span><span class="sc">{:&lt;10}</span><span class="st">"</span>.<span class="bu">format</span>(name, value))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>warm_start                : False     
+oob_score                 : False     
+n_jobs                    : 1         
+verbose                   : 0         
+max_leaf_nodes            : None      
+bootstrap                 : True      
+min_samples_leaf          : 1         
+n_estimators              : 10        
+min_samples_split         : 2         
+min_weight_fraction_leaf  : 0.0       
+criterion                 : gini      
+random_state              : None      
+max_features              : auto      
+max_depth                 : None      
+class_weight              : None      </code></pre>
+</div>
+</div>
+<p>As evident, our initial approach is different on two fronts. We didn’t explicitly use stratified sampling for our cross-validation. While the Random Forest hyperparameters are slightly different too (<em>max_depth=None</em>). That definitely sounds like a <em>to-do</em>, however, there is no reason why we should restrict ourselves to Random Forests. Remember, we are aiming <em>big</em> here. Given the <a href="https://www.openml.org/search?type=user">number of OpenML users</a>, there must be somebody who got a better score on Iris with some other model. Let us then retrieve that information. Programmatically, of course.</p>
+<p>In summary, we are now going to sort the performance of all scikit-learn based models on Iris dataset as per the task definition with <em>task_id=59</em>.</p>
+<div id="cell-67" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching top performances</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>task_df.sort_values(by<span class="op">=</span><span class="st">'value'</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">run_id</th>
+<th data-quarto-table-cell-role="th">task_id</th>
+<th data-quarto-table-cell-role="th">setup_id</th>
+<th data-quarto-table-cell-role="th">flow_id</th>
+<th data-quarto-table-cell-role="th">flow_name</th>
+<th data-quarto-table-cell-role="th">data_id</th>
+<th data-quarto-table-cell-role="th">data_name</th>
+<th data-quarto-table-cell-role="th">function</th>
+<th data-quarto-table-cell-role="th">upload_time</th>
+<th data-quarto-table-cell-role="th">uploader</th>
+<th data-quarto-table-cell-role="th">uploader_name</th>
+<th data-quarto-table-cell-role="th">value</th>
+<th data-quarto-table-cell-role="th">values</th>
+<th data-quarto-table-cell-role="th">array_data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3630</td>
+<td>2039748</td>
+<td>59</td>
+<td>180922</td>
+<td>6048</td>
+<td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-04-09 01:09:01</td>
+<td>1104</td>
+<td>jmapvhoof@gmail.com</td>
+<td>0.986667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3631</td>
+<td>2039750</td>
+<td>59</td>
+<td>180924</td>
+<td>6048</td>
+<td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-04-09 01:17:39</td>
+<td>1104</td>
+<td>jmapvhoof@gmail.com</td>
+<td>0.986667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3624</td>
+<td>2012939</td>
+<td>59</td>
+<td>157622</td>
+<td>6048</td>
+<td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-04-06 23:29:28</td>
+<td>1104</td>
+<td>jmapvhoof@gmail.com</td>
+<td>0.986667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3618</td>
+<td>2012930</td>
+<td>59</td>
+<td>157613</td>
+<td>6048</td>
+<td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-04-06 23:00:24</td>
+<td>1104</td>
+<td>jmapvhoof@gmail.com</td>
+<td>0.986667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3626</td>
+<td>2012941</td>
+<td>59</td>
+<td>157624</td>
+<td>6048</td>
+<td>sklearn.pipeline.Pipeline(dualimputer=helper.d...</td>
+<td>61</td>
+<td>iris</td>
+<td>predictive_accuracy</td>
+<td>2017-04-07 01:36:00</td>
+<td>1104</td>
+<td>jmapvhoof@gmail.com</td>
+<td>0.986667</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-68" class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching best performing flow</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> openml.flows.get_flow(<span class="dv">6048</span>)</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<pre><code>OpenML Flow
+===========
+Flow ID.........: 6048 (version 1)
+Flow URL........: https://www.openml.org/f/6048
+Flow Name.......: sklearn.pipeline.Pipeline(dualimputer=helper.dual_imputer.DualImputer,nusvc=sklearn.svm.classes.NuSVC)
+Flow Description: Automatically created scikit-learn flow.
+Upload Date.....: 2017-04-06 22:42:59
+Dependencies....: sklearn==0.18.1
+numpy&gt;=1.6.1
+scipy&gt;=0.9</code></pre>
+</div>
+</div>
+<div id="cell-69" class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetching best performing run</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> openml.runs.get_run(<span class="dv">2012943</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The model parameters</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> param <span class="kw">in</span> r.parameter_settings:</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    name, value <span class="op">=</span> param[<span class="st">'oml:name'</span>], param[<span class="st">'oml:value'</span>]</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">{:&lt;25}</span><span class="st"> : </span><span class="sc">{:&lt;10}</span><span class="st">"</span>.<span class="bu">format</span>(name, value))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>steps                     : [('DualImputer', &lt;helper.dual_imputer.DualImputer object at 0x7ff618e4d908&gt;), ('nusvc', NuSVC(cache_size=200, class_weight=None, coef0=0.0,
+   decision_function_shape=None, degree=3, gamma='auto', kernel='linear',
+   max_iter=-1, nu=0.3, probability=True, random_state=3, shrinking=True,
+   tol=3.2419092644286417e-05, verbose=False))]
+cache_size                : 200       
+class_weight              : None      
+coef0                     : 0.0       
+decision_function_shape   : None      
+degree                    : 3         
+gamma                     : auto      
+kernel                    : linear    
+max_iter                  : -1        
+nu                        : 0.3       
+probability               : True      
+random_state              : 3         
+shrinking                 : True      
+tol                       : 3.24190926443e-05
+verbose                   : False     </code></pre>
+</div>
+</div>
+<p>The highest score obtained among the uploaded results is <strong>98.67%</strong> using a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html#sklearn.svm.NuSVC">variant of SVM</a>. However, if we check the corresponding flow description, we see that it is using an old scikit-learn version (0.18.1) and therefore may not be possible to replicate the exact results. However, in order to improve from our score of 95.33%, we should try running a <em>nu-SVC</em> on the same problem and see where we stand. Let’s go for it. Via OpenML, of course.</p>
+</section>
+<section id="running-best-performing-flow-on-the-required-task" class="level4">
+<h4 class="anchored" data-anchor-id="running-best-performing-flow-on-the-required-task">Running best performing flow on the required&nbsp;task</h4>
+<div id="cell-72" class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openml</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.svm <span class="im">import</span> NuSVC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-73" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Building the NuSVC model object with parameters found</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> NuSVC(cache_size<span class="op">=</span><span class="dv">200</span>, class_weight<span class="op">=</span><span class="va">None</span>, coef0<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>   decision_function_shape<span class="op">=</span><span class="va">None</span>, degree<span class="op">=</span><span class="dv">3</span>, gamma<span class="op">=</span><span class="st">'auto'</span>, kernel<span class="op">=</span><span class="st">'linear'</span>,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>   max_iter<span class="op">=-</span><span class="dv">1</span>, nu<span class="op">=</span><span class="fl">0.3</span>, probability<span class="op">=</span><span class="va">True</span>, random_state<span class="op">=</span><span class="dv">3</span>, shrinking<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>   tol<span class="op">=</span><span class="fl">3.2419092644286417e-05</span>, verbose<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-74" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtaining task used earlier</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> openml.tasks.get_task(<span class="dv">59</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<pre><code>OpenML Classification Task
+==========================
+Task Type Description: https://www.openml.org/tt/1
+Task ID..............: 59
+Task URL.............: https://www.openml.org/t/59
+Estimation Procedure.: crossvalidation
+Evaluation Measure...: predictive_accuracy
+Target Feature.......: class
+# of Classes.........: 3
+Cost Matrix..........: Available</code></pre>
+</div>
+</div>
+<div id="cell-75" class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Running the model on the task</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Internally, the model will be made into </span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># an OpenML flow and we can choose to retrieve it</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>r, f <span class="op">=</span> openml.runs.run_model_on_task(model<span class="op">=</span>clf, task<span class="op">=</span>t, upload_flow<span class="op">=</span><span class="va">False</span>, return_flow<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="44">
+<pre><code>OpenML Flow
+===========
+Flow Name.......: sklearn.svm.classes.NuSVC
+Flow Description: Nu-Support Vector Classification.
+
+Similar to SVC but uses a parameter to control the number of support
+vectors.
+
+The implementation is based on libsvm.
+Dependencies....: sklearn==0.21.3
+numpy&gt;=1.6.1
+scipy&gt;=0.9</code></pre>
+</div>
+</div>
+<div id="cell-76" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To obtain the score (without uploading)</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="co">## r.publish() can be used to upload these results</span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="co">## need to sign-in to https://www.openml.org/</span></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> []</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>evaluations <span class="op">=</span> r.fold_evaluations[<span class="st">'predictive_accuracy'</span>][<span class="dv">0</span>]</span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> evaluations:</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>    score.append(evaluations[key])</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.mean(score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9866666666666667</code></pre>
+</div>
+</div>
+<p>Lo and behold! We hit the magic number. I personally would have never tried out NuSVC and would have stuck around tweaking hyperparameters of the Random Forest. This is a new discovery of sorts for sure. I wonder though if anybody has tried XGBoost on Iris?</p>
+<p>In any case, we can now upload the results of this run to OpenML using:</p>
+<div id="cell-78" class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>r.publish()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>OpenML Run
+==========
+Uploader Name: None
+Metric.......: None
+Run ID.......: 10464835
+Run URL......: https://www.openml.org/r/10464835
+Task ID......: 59
+Task Type....: None
+Task URL.....: https://www.openml.org/t/59
+Flow ID......: 18579
+Flow Name....: sklearn.svm.classes.NuSVC
+Flow URL.....: https://www.openml.org/f/18579
+Setup ID.....: None
+Setup String.: Python_3.6.9. Sklearn_0.21.3. NumPy_1.16.4. SciPy_1.4.1. NuSVC(cache_size=200, class_weight=None, coef0=0.0,
+      decision_function_shape=None, degree=3, gamma='auto', kernel='linear',
+      max_iter=-1, nu=0.3, probability=True, random_state=3, shrinking=True,
+      tol=3.241909264428642e-05, verbose=False)
+Dataset ID...: 61
+Dataset URL..: https://www.openml.org/d/61</code></pre>
+</div>
+</div>
+<p>One would need to sign-in to https://www.openml.org/ and generate their respective <em>apikey</em>. The results would then be available for everyone to view and who knows, you can have your name against the <em>best-ever</em> performance measured on the Iris dataset!</p>
+<hr>
+<p>This post was in no ways intended to be a be-all-end-all guide to OpenML. The primary goal was to help form an acquaintance with the OpenML terminologies, introduce the API, establish connections with the general ML practices, and give a sneak-peek into the potential benefits of working together as a <em>community</em>. For a better understanding of OpenML, please explore the <a href="https://openml.github.io/openml-python/develop/usage.html#usage">documentation</a>. If one desires to continue from the examples given in this post and explore further, kindly refer to the <a href="https://openml.github.io/openml-python/develop/api.html">API</a>.</p>
+<p>OpenML-Python is an open-source project and contributions from everyone in the form of Issues and Pull Requests are most welcome. Contribution to the OpenML community is in fact not limited to code contribution. Every single user can make the community richer by sharing data, experiments, results, using OpenML.</p>
+<p>As ML practitioners, we may be dependent on tools for our tasks. However, as a collective, we can juice out its potential to a larger extent. Let us together, make ML more transparent, more democratic!</p>
+<hr>
+<p>Special thanks to Heidi, Bilge, Sahithya, Matthias, Ashwin for the ideas, feedback, and support.</p>
+<hr>
+<p>Related readings: * <a href="https://openml.github.io/openml-python/develop/">To get started with OpenML-Python</a> * <a href="https://github.com/openml/openml-python">OpenML-Python Github</a> * <a href="https://www.openml.org/">The OpenML website</a> * <a href="https://openml.github.io/blog/">Miscellaneous reading on OpenML</a> * <a href="https://www.openml.org/contact">To get in touch!</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

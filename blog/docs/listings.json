@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Experiments-with-temperature/experiments_with_temp.html",
+      "/posts/OpenML-Hacktoberfest/2020-10-23-OpenML-Hacktoberfest.html",
+      "/posts/2020-05-06-Reproducible-deep-learning-with-OpenML/2020-05-06-Reproducible-deep-learning-with-OpenML.html",
+      "/posts/2020-03-23-Finding a-standard-dataset-format-for-machine-learning/2020-03-23-Finding a-standard-dataset-format-for-machine-learning.html",
+      "/posts/2019-10-26-OpenML-Machine-Learning-as-a-community/2019-10-26-OpenML-Machine-Learning-as-a-community.html",
+      "/posts/2019-10-24-OpenML-workshop-at-Dagstuhl/2019-10-24-OpenML-workshop-at-Dagstuhl.html",
+      "/posts/2017-03-03-Basic-components-of-OpenML/2017-03-03-Basic-components-of-OpenML.html",
+      "/posts/2016-09-18-mlr-loves-OpenML/2016-09-18-mlr-loves-OpenML.html",
+      "/posts/2016-05-02-OpenML/2016-05-02-OpenML.html"
+    ]
+  }
+]
