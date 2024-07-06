@@ -1,0 +1,18 @@
+---
+# title: "OpenML Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+
+# Welcome to the Open Machine Learning blog
+This blog brings you stories about OpenML: why we want to streamline machine learning research, how you can use it, and what we are doing. 
+We are also open to [your stories](https://github.com/openml/blog#how-to-contribute) about anything related to open machine learning research, education, and applications. 
+Join the conversation :).
